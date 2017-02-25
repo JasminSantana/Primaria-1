@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alignmentMode="alignBounds">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="6"
+            android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:src="@drawable/red_bot"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:src="@drawable/blue_bot"
+            android:paddingLeft="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:src="@drawable/white_bot"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:src="@drawable/green_bt"
+            android:paddingLeft="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:src="@drawable/yellow_bot"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:src="@drawable/grey_bot"
+            android:paddingLeft="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:src="@drawable/pink_but"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/iv_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="4"
+            android:src="@drawable/orage_bot"
+            android:paddingLeft="30dp"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+

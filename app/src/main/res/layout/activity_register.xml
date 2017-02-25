@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/hamburgesa"
+    tools:context="mx.edu.utng.primaria.login.LoginActivity"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:background="@drawable/btn_circulo_focussed"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/user1"
+            app:backgroundTint="@color/bg_screen2"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Learning English"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:padding="10dp"
+        android:fontFamily="serif"
+        android:textColor="@color/white"
+
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:id="@+id/et_user_name"
+        android:hint="User Name"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="23dp"
+        android:background="@drawable/edittext_login_form"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:id="@+id/et_user_apellidos"
+        android:hint="User LastName"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="23dp"
+        android:background="@drawable/edittext_login_form"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:id="@+id/et_email"
+        android:hint="Email"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="23dp"
+        android:background="@drawable/edittext_login_form"/>
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        android:singleLine="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTintMode="multiply"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="23dp"
+        android:background="@drawable/edittext_login_form"
+        />
+
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="register"
+            android:backgroundTintMode="multiply"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="23dp"
+            android:background="@drawable/button_login_form"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Back to login"
+        android:id="@+id/tv_login"
+        android:textColor="@color/blue"
+        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
+

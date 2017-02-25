@@ -1,0 +1,62 @@
+<resources>
+
+    <string name="app_name">Learning English</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="certificate">Certificate</string>
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="import_image">Import image</string>
+    <string name="tools">Tools</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="gallery">Gallery</string>
+    <string name="comunicate">Comunicate</string>
+    <string name="share">Share</string>
+    <string name="Preferences">Preferences</string>
+    <string name="android_studio">Android studio</string>
+    <string name="android_studio_android_com">android.studio@android.com</string>
+    <string name="user_data">User data</string>
+    <string name="sound">Sound</string>
+    <string name="active_sog">Active or Inactive the Song</string>
+    <string name="username">Username</string>
+    <string name="identifies_user">Identifies user in the application</string>
+    <string name="type_your_username">Type your username</string>
+    <string name="countries_data">Countries Data</string>
+    <string name="country">Country</string>
+    <string name="user_country">User country</string>
+    <string name="select_country">Select country</string>
+    <string name="turn_of_sound">Turn of the Sound</string>
+    <string name="fragment_camera">Fragment camera</string>
+    <string name="fragment_gallery">Fragment Gallery</string>
+    <string name="fragment_gallery1">Fragment gallery</string>
+    <string name="open_drawer">Open navegation drawer</string>
+    <string name="close_drawer">close navigation drawer</string>
+    <string-array name="countries">
+        <item>Mexico</item>
+        <item>United States</item>
+        <item>Poland</item>
+        <item>Germany</item>
+        <item>Italy</item>
+    </string-array>
+    <string-array name="country_codes">
+        <item>MEX</item>
+        <item>USA</item>
+        <item>POL</item>
+        <item>ITA</item>
+    </string-array>
+</resources>

@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degradado"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to final test"
+        android:id="@+id/tv_welcome"
+        android:textSize="20dp"
+        android:textColor="#880808"
+        android:fontFamily="monospace"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What color is?"
+                android:id="@+id/tv_red"
+                android:textSize="16dp"
+                android:textColor="#0604a1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/red"
+                android:id="@+id/im_red"
+                android:layout_alignBottom="@+id/tv_red"
+                android:layout_toRightOf="@+id/tv_red"
+                android:layout_toEndOf="@+id/tv_red"
+                android:layout_marginLeft="22dp"
+                android:layout_marginStart="22dp" />
+            <RadioGroup
+                android:id="@+id/rdgGrupo"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_red"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="White"
+                    android:id="@+id/rb_white"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/rdgGrupo"
+                    android:layout_toEndOf="@+id/rdgGrupo" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Red"
+                    android:id="@+id/rb_red"
+                    android:layout_alignTop="@+id/im_red"
+                    android:layout_toRightOf="@+id/tv_father"
+                    android:layout_toEndOf="@+id/tv_father" />
+                <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brown"
+                android:id="@+id/rb_brown"
+                android:layout_below="@+id/im_red"
+                android:layout_toRightOf="@+id/ch_red"
+                android:layout_toEndOf="@+id/ch_red" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is the result of the sum 10+5= ?"
+                android:id="@+id/tv_sum"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgGrupo"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rdgDos"
+                android:layout_below="@id/tv_sum"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:id="@+id/rb_15"
+                    android:layout_below="@+id/tv_sum"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:id="@+id/rb_2"
+                    android:layout_below="@+id/tv_sum"
+                    android:layout_toRightOf="@+id/ch_15"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:id="@+id/rb_10"
+                    android:layout_below="@+id/tv_sum"
+                    android:layout_toRightOf="@+id/ch_2"
+                    />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who is the father ?"
+                android:id="@+id/tv_father"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgDos"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rdgTres"
+                android:layout_below="@+id/tv_father">
+                <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_boy"
+                android:layout_below="@+id/tv_father"
+                />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+android:src="@drawable/boy"
+                    android:id="@+id/image_boy"
+                    android:layout_below="@+id/tv_father"
+                     />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_woman"
+                    android:layout_alignBottom="@+id/image_woman"
+                    android:layout_toRightOf="@+id/image_boy"
+                    android:layout_toEndOf="@+id/image_boy" />
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="35dp"
+android:src="@drawable/mujer"
+                    android:id="@+id/image_woman"
+                    android:layout_below="@+id/tv_father"
+                    android:layout_toRightOf="@+id/tv_red"
+                    android:layout_toEndOf="@+id/tv_red" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_father"
+                   />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="38dp"
+android:src="@drawable/hombre"
+                    android:id="@+id/image_women"
+                    />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What color is ?"
+                android:id="@+id/tv_green"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgTres"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/green"
+                android:id="@+id/im_green"
+                android:layout_below="@+id/rdgTres"
+                android:layout_alignRight="@+id/im_red"
+                android:layout_alignEnd="@+id/im_red" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgCuatro"
+                android:layout_below="@+id/tv_green"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Green"
+                    android:id="@+id/rb_green"
+                    android:layout_below="@id/tv_green"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pink"
+                    android:id="@+id/rb_pink"
+
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blue"
+                    android:id="@+id/rb_blue"
+                    />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select the right sport:"
+                android:id="@+id/tv_sport"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgCuatro"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgCinco"
+                android:layout_below="@id/tv_sport"
+                android:orientation="vertical">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Football"
+                    android:id="@+id/rb_football"
+                    android:layout_below="@id/tv_sport"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tennis"
+                    android:id="@+id/rb_tennis"
+                    android:layout_below="@id/rb_football"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volleyball"
+                    android:id="@+id/rb_volleyball"
+                    android:layout_below="@id/rb_tennis"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basketball"
+                    android:id="@+id/rb_basketball"
+                    android:layout_below="@id/rb_volleyball"/>
+
+
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+android:src="@drawable/tenis"
+                android:layout_below="@+id/tv_sport"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tenis" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+               android:src="@drawable/basquet"
+                android:id="@+id/basquet"
+                android:layout_alignBottom="@+id/rdgCinco"
+                android:layout_alignRight="@+id/tv_animal"
+                android:layout_alignEnd="@+id/tv_animal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Listen and select answer"
+                android:id="@+id/tv_em"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgCinco"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/bocina"
+                android:id="@+id/bt_em"
+                android:backgroundTint="#fdcf05"
+                android:layout_below="@+id/rdgCinco"
+                android:layout_alignLeft="@+id/tenis"
+                android:layout_alignStart="@+id/tenis" />
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rdgSeis"
+    android:layout_below="@+id/tv_em"
+    android:orientation="horizontal"
+    >
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:id="@+id/rb_letter_a"
+        android:layout_below="@id/tv_em"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z"
+        android:id="@+id/rb_letter_z"
+        android:layout_above="@+id/tv_mother"
+        android:layout_toRightOf="@+id/ch_green"
+        android:layout_toEndOf="@+id/ch_green" />
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M"
+        android:id="@+id/rb_letter_m"
+        android:layout_below="@+id/tv_em"
+        />
+
+</RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who is the mother ?"
+                android:id="@+id/tv_mother"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_below="@+id/rdgSeis"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgSiete"
+                android:layout_below="@+id/tv_mother"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_mother_mo"
+
+                    />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mujer"
+                    android:id="@+id/image_woman_mo"
+                    android:layout_below="@+id/tv_mother"
+                    android:layout_toRightOf="@+id/ch_mother_mo"
+                    android:layout_toEndOf="@+id/ch_mother_mo" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_baby_mo"
+                    android:layout_below="@+id/tv_mother"
+                    android:layout_alignRight="@+id/tv_green"
+                    android:layout_alignEnd="@+id/tv_green" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+android:src="@drawable/bebe"
+                    android:id="@+id/image_baby_mo"
+                    android:layout_above="@+id/bt_dog"
+                    android:layout_toLeftOf="@+id/ch_father"
+                    android:layout_toStartOf="@+id/ch_father" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_grant_mo"
+                    android:layout_below="@+id/tv_mother"
+                    android:layout_toRightOf="@+id/image_baby_mo"
+                    android:layout_toEndOf="@+id/image_baby_mo" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/abuela"
+                    android:id="@+id/image_abue_mo"
+                    android:layout_alignTop="@+id/rb_grant_mo"
+                    android:layout_alignRight="@+id/rb_10"
+                    android:layout_alignEnd="@+id/rb_10" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What animal is heard ?"
+                android:id="@+id/tv_animal"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/rdgSiete"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/bocina"
+                android:id="@+id/bt_dog"
+                android:backgroundTint="#fad106"
+                android:layout_alignBottom="@+id/tv_animal"
+                android:layout_toRightOf="@+id/tv_animal"
+                android:layout_toEndOf="@+id/tv_animal" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgOcho"
+                android:layout_below="@+id/tv_animal"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_leon"
+                    android:layout_below="@+id/tv_animal"
+                    android:text="leon"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_dog"
+                    android:text="Dog"
+                    android:layout_above="@+id/tv_rec"
+                    android:layout_toLeftOf="@+id/bt_em"
+                    android:layout_toStartOf="@+id/bt_em" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_duck"
+                    android:text="Duck"
+                    android:layout_below="@+id/tv_animal"
+                    android:layout_alignLeft="@+id/rb_baby_mo"
+                    android:layout_alignStart="@+id/rb_baby_mo" />
+
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:text="What figure is it?"
+                android:id="@+id/tv_rec"
+                android:layout_below="@+id/rdgOcho"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bocina"
+                android:id="@+id/bt_circle"
+                android:backgroundTint="#fad106"
+                android:layout_above="@+id/rdgNueve"
+                android:layout_alignLeft="@+id/bt_dog"
+                android:layout_alignStart="@+id/bt_dog" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgNueve"
+                android:layout_below="@+id/tv_rec"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_rectangle"
+                    android:text="Rectangle"
+                    android:layout_below="@+id/tv_rec"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_Circle"
+                    android:text="Circle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/tv_animal"
+                    android:layout_alignEnd="@+id/tv_animal" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_triangle"
+                    android:text="Triangle"
+                    android:layout_alignParentBottom="true"
+                     />
+
+
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/futbol"
+                android:id="@+id/fut"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/tenis"
+                android:layout_alignRight="@+id/tv_sport"
+                android:layout_alignEnd="@+id/tv_sport" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="what is the number seven ?"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="#0604a1"
+                android:id="@+id/tv_num_seven"
+                android:layout_below="@+id/rdgNueve"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdgDiez"
+                android:layout_below="@+id/tv_num_seven"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:id="@+id/rb_five"
+                    android:layout_alignParentTop="true"
+                     />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:id="@+id/rb_three"
+               />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:id="@+id/rb_seven"
+
+                    />
+
+            </RadioGroup>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar/Send"
+                android:id="@+id/bt_enviar"
+                android:textColor="@color/white"
+                android:layout_below="@+id/rdgDiez"
+
+                android:background="@drawable/button_login_form" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

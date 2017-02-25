@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/fondocuadros"
+    app:theme="@style/ThemeOverlay.AppCompat"
+    android:gravity="bottom"
+    android:weightSum="1"
+    tools:context="mx.edu.utng.primaria.menu.nameHeader"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/logolearningenglish"
+        android:id="@+id/imageView"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/android_studio"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:fontFamily="casual"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_user_name"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_email"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="15dp"
+        android:textStyle="italic"/>
+
+</LinearLayout>
