@@ -1,0 +1,545 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:numColumns="auto_fit"
+            android:columnCount="2"
+            android:rowCount="6">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_mother"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#FF5733"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_marginRight="3dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_mother"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/mother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_mother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9pt"
+                        android:text="MOTHER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_mother"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(mamá)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_father"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#58D68D"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="1"
+                android:layout_row="0">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_father"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/father"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_father"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9pt"
+                        android:text="FATHER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_father"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(papá)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_grandmother"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#85C1E9"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_grandMother"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/grandmother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_grandmother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="GRANDMOTHER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_grandMother"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(abuela)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_grandfather"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#E59866"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_grandFather"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/grandfather"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_grandfather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="GRANDFATHER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_grandFather"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(abuelo)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_brother"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#AF7AC5"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_brother"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/brother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_brother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="BROTHER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_brother"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(hermano)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_sister"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F7DC6F"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_sister"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/sister"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_sister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9pt"
+                        android:text="SISTER"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_sister"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(hermana)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_uncle"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#D7DBDD"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_uncle"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/uncle"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_uncle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="UNCLE"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_uncle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(tío)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_aunt"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F5CBA7"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_aunt"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/aunt"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_aunt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9pt"
+                        android:text="AUNT"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_aunt"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(tía)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_cusin"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#3498DB"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_cousin"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/cousins"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_cousin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="COUSIN"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_cousin"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="[primo(a)]"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cv_baby"
+                android:layout_width="145dp"
+                android:layout_height="270dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F5B7B1"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp">
+
+                    <ImageView
+                        android:id="@+id/iv_baby"
+                        android:layout_width="150dp"
+                        android:layout_height="190dp"
+                        android:src="@drawable/baby"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_baby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="9pt"
+                        android:text="BABY"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/iv_baby"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:text="(bebé)"
+                        android:textStyle="bold"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>

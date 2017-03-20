@@ -1,0 +1,38 @@
+<html>
+  <head>
+  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+     
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'TEST');
+      data.addColumn('number', 'VALUE');
+      data.addRows([
+        ['Test 1', Android.getTest1()],
+        ['Test 2', Android.getTest2()],
+        ['Test 3', Android.getTest3()], 
+        ['Test 4', Android.getTest4()],
+        ['Test 5', Android.getTest5()],
+		['Test Final', Android.getTestFinal()]
+      ]);
+
+      var options = {'title':'Android-er: Load Google Charts (pie chart) with WebView',
+                     'width':600,
+                     'height':600};
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div" style="width:600; height:600"></div>
+  </body>
+</html>

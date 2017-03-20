@@ -2,6 +2,7 @@ package mx.edu.utng.primaria.activities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -21,6 +22,10 @@ public class CertificateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_certificate);
+        this.setTitle("Certificate");
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         sharedPreferences = getApplicationContext().getSharedPreferences("recuperardatos", Context.MODE_PRIVATE);
         user = sharedPreferences.getString(SETTING_USER,"");
         pass = sharedPreferences.getString(SETTING_PASS,"");

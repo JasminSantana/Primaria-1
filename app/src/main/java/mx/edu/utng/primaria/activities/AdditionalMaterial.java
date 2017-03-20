@@ -1,6 +1,7 @@
 package mx.edu.utng.primaria.activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -22,6 +23,10 @@ public class AdditionalMaterial extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_item);
+        this.setTitle("Videos");
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         /*imgAlfabet=(ImageButton)findViewById(R.id.image_video);
         imgAlfabet.setOnClickListener(this);
         imgNum=(ImageButton)findViewById(R.id.image_num);
@@ -34,11 +39,11 @@ public class AdditionalMaterial extends AppCompatActivity  {
         rvList.setLayoutManager(manager);
 
         List<Activities> activitiesList = new ArrayList<Activities>();
-        activitiesList.add(new Activities(R.drawable.icon_android, "Alphabet", "Listening",R.color.fb));
-        activitiesList.add(new Activities(R.drawable.icon_android, "Numbers", "Listening",R.color.fb));
-        activitiesList.add(new Activities(R.drawable.icon_android, "Colors", "Listening",R.color.fb));
-        activitiesList.add(new Activities(R.drawable.icon_android, "Cloths", "Listening",R.color.fb));
-        activitiesList.add(new Activities(R.drawable.test, "Deportes", "Listening",R.color.fb));
+        activitiesList.add(new Activities(R.drawable.icon_android, "Video", "1",R.color.fb));
+        activitiesList.add(new Activities(R.drawable.icon_android, "Video", "2",R.color.fb));
+        activitiesList.add(new Activities(R.drawable.icon_android, "Video", "3",R.color.fb));
+        activitiesList.add(new Activities(R.drawable.icon_android, "Video", "4",R.color.fb));
+        activitiesList.add(new Activities(R.drawable.icon_android, "Video", "5",R.color.fb));
 
         ActivitiesAdapter adapter = new ActivitiesAdapter(activitiesList);
         adapter.setOnclicListener(new View.OnClickListener() {

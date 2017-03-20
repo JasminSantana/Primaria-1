@@ -26,7 +26,7 @@ public class GeoFigSports extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_item);
-
+        this.setTitle("Geometric Figures and\n Sports");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 

@@ -12,6 +12,10 @@
         <item name="windowNoTitle">true</item>
 
     </style>
+    <style name="Theme.AppCompat.WriteStyle" parent="Theme.AppCompat" />
+
+    <style name="dialog" parent="AlertDialog.AppCompat" />
+    <style name="AlertDialog.AppCompat.Dialog" parent="AlertDialog.AppCompat" />
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

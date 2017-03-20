@@ -2,6 +2,7 @@ package mx.edu.utng.primaria.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,7 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mx.edu.utng.primaria.R;
+import mx.edu.utng.primaria.activities.listener.FamilyListenerActivity;
 import mx.edu.utng.primaria.activities.listener.NumbersListening;
+import mx.edu.utng.primaria.activities.write.FamilyWriteActivity;
 import mx.edu.utng.primaria.adapters.ActivitiesAdapter;
 import mx.edu.utng.primaria.model.Activities;
 
@@ -25,6 +28,10 @@ public class FamilyClothes extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_item);
+        this.setTitle("Family and Clothes");
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         final RecyclerView rvList = (RecyclerView)findViewById(R.id.rv_list);
         rvList.setHasFixedSize(true);
@@ -45,20 +52,20 @@ public class FamilyClothes extends AppCompatActivity {
             public void onClick(View v) {
                 switch(rvList.getChildPosition(v)){
                     case 0:
-                       // startActivity(new Intent(getApplicationContext(),AlphabetListening.class));
+                        startActivity(new Intent(getApplicationContext(),FamilyListenerActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),NumbersListening.class));
+                        //startActivity(new Intent(getApplicationContext(),AlphabetWrititng.class));
                         break;
-                   /* case 2:
-                        startActivity(new Intent(getApplicationContext(),AlphabetWrititng.class));
+                    case 2:
+                        startActivity(new Intent(getApplicationContext(),FamilyWriteActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
+                        //startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
                         break;
                     case 4:
-                        startActivity(new Intent(getApplicationContext(),TestActivity1.class));
-                        break;*/
+                        //startActivity(new Intent(getApplicationContext(),TestActivity1.class));
+                        break;
                 }
             }
         });

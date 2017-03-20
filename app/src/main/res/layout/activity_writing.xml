@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/cv_writing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tv_title_writing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15pt"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_weight="0.11">
+
+
+                <ImageView
+                    android:id="@+id/iv_writing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="25dp"/>
+
+                <TextView
+                        android:id="@+id/et_writing_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15pt"
+                        android:textColor="@color/fb"
+                        android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/et_writing_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:hint="Name color"
+                android:inputType="text"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                android:background="@drawable/edittext_login_form"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:backgroundTintMode="multiply"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/bt_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aceptar"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

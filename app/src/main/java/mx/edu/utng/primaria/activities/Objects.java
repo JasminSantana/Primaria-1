@@ -50,20 +50,20 @@ public class Objects extends ActionBarActivity {
                        // startActivity(new Intent(getApplicationContext(),AlphabetListening.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),NumbersListening.class));
+                        //startActivity(new Intent(getApplicationContext(),NumbersListening.class));
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(),AdditionalMaterial.class));
+                        //startActivity(new Intent(getApplicationContext(),AdditionalMaterial.class));
                         break;
-                   /* case 3:
-                        startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
+                    case 3:
+                        //startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
                         break;
                     case 4:
-                        startActivity(new Intent(getApplicationContext(),Resources.class));
+                        //startActivity(new Intent(getApplicationContext(),Resources.class));
                         break;
                     case 5:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
-                        break;*/
+                        //startActivity(new Intent(getApplicationContext(),Test.class));
+                        break;
                 }
             }
         });

@@ -24,15 +24,16 @@
 
 
                 <ImageButton
-                    android:id="@+id/fab_activity_1"
+                    android:id="@+id/ib_activity_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/button_circle"
                     android:layout_column="4"
                     android:layout_row="1"
                     android:layout_gravity="center"
-                    android:src="@drawable/activity_1"
-                    android:layout_marginTop="5dp"/>
+                    android:src="@drawable/activity_one"
+                    android:layout_marginTop="5dp"
+                    />
 
                 <TextView
                     android:id="@+id/tv_al_nu"
@@ -46,10 +47,10 @@
                     android:paddingBottom="45dp"/>
 
                 <ImageButton
-                    android:id="@+id/fab_activity_2"
+                    android:id="@+id/ib_activity_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/activity_1"
+                    android:src="@drawable/activity_two"
                     android:background="@drawable/button_unactivated"
                     android:layout_column="0"
                     android:layout_row="3"
@@ -67,10 +68,10 @@
                     android:paddingBottom="45dp"/>
 
                 <ImageButton
-                    android:id="@+id/fab_activity_3"
+                    android:id="@+id/ib_activity_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/activity_1"
+                    android:src="@drawable/activity_three"
                     android:background="@drawable/button_unactivated"
                     android:layout_column="5"
                     android:layout_row="3"
@@ -88,10 +89,10 @@
                     android:paddingBottom="45dp"/>
 
                 <ImageButton
-                    android:id="@+id/fab_activity_4"
+                    android:id="@+id/ib_activity_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/activity_1"
+                    android:src="@drawable/activity_four"
                     android:background="@drawable/button_unactivated"
                     android:layout_column="0"
                     android:layout_row="6"
@@ -111,10 +112,10 @@
 
 
                 <ImageButton
-                    android:id="@+id/fab_activity_5"
+                    android:id="@+id/ib_activity_5"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/activity_1"
+                    android:src="@drawable/activity_four"
                     android:background="@drawable/button_unactivated"
                     android:layout_column="5"
                     android:layout_row="6"
@@ -142,7 +143,7 @@
                     android:textStyle="bold"/>
 
                 <ImageView
-                    android:id="@+id/bt_certificate"
+                    android:id="@+id/iv_certificate"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@drawable/button_unactivated"
@@ -155,8 +156,5 @@
 
 
         </ScrollView>
-
-
-
 
 </LinearLayout>

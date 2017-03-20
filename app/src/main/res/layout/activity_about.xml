@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/about_degradado">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:src="@drawable/utng"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learning English"
+                android:textSize="18pt"
+                android:textColor="@color/red"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center"
+                android:id="@+id/iv_logo_about"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developers:"
+                android:textSize="14pt"
+                android:textColor="@color/red"
+                android:layout_margin="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="* Barrientos Sanchez Pablo Jesus"
+                android:textSize="14pt"
+                android:textColor="@color/white"
+                android:id="@+id/tv_pablo"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="* Coronilla Jaramillo Bernardo"
+                android:textSize="14pt"
+                android:textColor="@color/white"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* Santana Mares Jasmin Aide"
+                android:textSize="14pt"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 1.0"
+                android:textSize="14pt"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:textColor="@color/red"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*********************
+                El objetivo de la aplicación: enseñar ingles basico a
+                los niños de entre 6 y 8 años de edad."
+                android:textSize="14pt"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

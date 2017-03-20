@@ -17,10 +17,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.listener.Alphabet" />
         <activity android:name=".activities.test.Test" />
-        <activity android:name=".activities.AdditionalMaterial" />
-        <activity android:name=".activities.Videos" />
+
+        <activity android:name=".activities.test.TestAlphabet"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+
+        <activity android:name=".activities.AdditionalMaterial"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity android:name=".activities.Videos"
+            android:parentActivityName=".activities.AdditionalMaterial">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AdditionalMaterial" />
+        </activity>
         <activity
             android:name=".menu.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -46,7 +63,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu.MainActivity" />
         </activity>
-        <activity android:name=".activities.listener.NumbersListening" />
         <activity android:name=".login.RegisterActivity" />
         <activity android:name=".menu.nameHeader" />
         <activity android:name=".menu.Preferences" />
@@ -66,12 +82,145 @@
         </activity>
         <activity
             android:name=".activities.listener.ColorListeningActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.CertificateActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.write.ColorYellowActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorOrangeActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorWhiteActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorRedActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorPurlpeActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorPinkActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorGreenActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorBrownActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorBlueActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.write.ColorBlackActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.test.TestAnimalsColorsActivity"
+            android:parentActivityName=".activities.AnimalsColors">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AnimalsColors" />
+        </activity>
+        <activity
+            android:name=".activities.listener.FamilyListenerActivity"
+            android:parentActivityName=".activities.FamilyClothes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.FamilyClothes" />
+        </activity>
+        <activity android:name=".activities.write.FamilyWriteActivity"
+            android:parentActivityName=".activities.FamilyClothes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.FamilyClothes" />
+        </activity>
+
+        <activity android:name=".activities.write.NumbersWrite"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity android:name=".activities.listener.Alphabet"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity android:name=".activities.test.TestAlphabet"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity android:name=".activities.write.AlphabetWrite"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity android:name=".activities.AboutActivity"
             android:parentActivityName=".menu.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu.MainActivity" />
         </activity>
-        <activity android:name=".activities.CertificateActivity" android:screenOrientation="landscape"></activity>
+
+        <activity android:name=".activities.listener.NumbersListening"
+            android:parentActivityName=".activities.AlphabetNumbers">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".menu.MainActivity" />
+    </activity>
+
+        <activity android:name=".activities.TableroLogros"/>
+
     </application>
 
 </manifest>

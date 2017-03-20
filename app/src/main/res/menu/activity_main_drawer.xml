@@ -28,16 +28,27 @@
                 android:icon="@android:drawable/ic_menu_send"
                 android:title="@string/Preferences">
             </item>
-        </menu>
+        </menu>r
 
     </item>
     <item android:id="@+id/nav_instructions"
         android:icon="@android:drawable/ic_menu_agenda"
         android:title="instructions"
         />
+
+    <item android:id="@+id/nav_logro"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Tablero Logros"
+        />
+
     <item android:id="@+id/nav_exit"
         android:icon="@android:drawable/ic_delete"
-        android:title="exit"
+        android:title="Exit"
        />
+
+    <item android:id="@+id/nav_about"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="About"
+        />
 
 </menu>

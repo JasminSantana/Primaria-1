@@ -8,6 +8,8 @@
     <color name="gray">#99C0C0C0</color>
     <color name="fb">#FFFFFF</color>
     <color name="enable">#ffffff</color>
+    <color name="red">#fc00</color>
+
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>

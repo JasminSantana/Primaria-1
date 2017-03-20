@@ -2,6 +2,7 @@ package mx.edu.utng.primaria.activities.listener;
 
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,10 @@ public class ColorListeningActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color_listening);
+        this.setTitle("Color Listening");
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         ivRed = (ImageView)findViewById(R.id.iv_red);
         ivYellow = (ImageView)findViewById(R.id.iv_yellow);

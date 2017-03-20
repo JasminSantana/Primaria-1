@@ -1,0 +1,487 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Write the name of the family member"
+                android:layout_gravity="center"
+                android:textSize="10pt"
+                android:textColor="#E74C3C"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#76D7C4"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_father"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/father"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_father"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="F _ T H _ _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_father"
+                        android:layout_toRightOf="@id/iv_father"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_father"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_father"
+                        android:layout_toRightOf="@id/iv_father"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F8C471"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_brother"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/brother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_brother"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_brother"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="B _ _ _  H E R"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_brother"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_brother"
+                        android:layout_toRightOf="@id/iv_brother"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="7"/>
+
+                    <Button
+                        android:id="@+id/bt_brother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_brother"
+                        android:layout_toRightOf="@id/iv_brother"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#BB8FCE"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_aunt"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/aunt"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_aunt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_aunt"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="A _ _ T"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_aunt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_aunt"
+                        android:layout_toRightOf="@id/iv_aunt"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="4"/>
+
+                    <Button
+                        android:id="@+id/bt_aunt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_aunt"
+                        android:layout_toRightOf="@id/iv_aunt"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F0B27A"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_mother"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_mother"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_mother"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="M _ T _ E _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_mother"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_mother"
+                        android:layout_toRightOf="@id/iv_mother"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_mother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_mother"
+                        android:layout_toRightOf="@id/iv_mother"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F1948A"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_sister"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sister"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_sister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_sister"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="S _ S _ E _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_sister"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_sister"
+                        android:layout_toRightOf="@id/iv_sister"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_sister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_sister"
+                        android:layout_toRightOf="@id/iv_sister"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#82E0AA"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_cousin"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/cousins"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_cousin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_cousin"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="C O _ S _ N"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_cousin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_cousin"
+                        android:layout_toRightOf="@id/iv_cousin"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_cousin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_cousin"
+                        android:layout_toRightOf="@id/iv_cousin"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#85C1E9"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_grandFather"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/grandfather"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_grandFather"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_grandFather"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="G _ A N _ F A _ H _ R"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_grandFather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_grandFather"
+                        android:layout_toRightOf="@id/iv_grandFather"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_grandfather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_grandFather"
+                        android:layout_toRightOf="@id/iv_grandFather"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#58D68D"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_grandMother"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/grandmother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_grandMother"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_grandMother"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="G _ A N _ M O _ H _ R"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_grandMother"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_grandMother"
+                        android:layout_toRightOf="@id/iv_grandMother"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_grandmother"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_grandMother"
+                        android:layout_toRightOf="@id/iv_grandMother"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

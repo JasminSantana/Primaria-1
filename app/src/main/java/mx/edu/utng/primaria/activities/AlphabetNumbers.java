@@ -16,6 +16,9 @@ import mx.edu.utng.primaria.R;
 import mx.edu.utng.primaria.activities.listener.Alphabet;
 import mx.edu.utng.primaria.activities.listener.NumbersListening;
 import mx.edu.utng.primaria.activities.test.Test;
+import mx.edu.utng.primaria.activities.test.TestAlphabet;
+import mx.edu.utng.primaria.activities.write.AlphabetWrite;
+import mx.edu.utng.primaria.activities.write.NumbersWrite;
 import mx.edu.utng.primaria.adapters.ActivitiesAdapter;
 import mx.edu.utng.primaria.model.Activities;
 
@@ -24,6 +27,8 @@ public class AlphabetNumbers extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_item);
+        this.setTitle("Alphabet and Numbers");
+
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -54,16 +59,16 @@ public class AlphabetNumbers extends ActionBarActivity {
                         break;
                     case 2:
                         //clase a llamar AlphabetWrititng
-                       // startActivity(new Intent(getApplicationContext(),AlphabetWriting.class));
+                        startActivity(new Intent(getApplicationContext(),AlphabetWrite.class));
                         break;
                     case 3:
-                        startActivity(new Intent(getApplicationContext(),NumbersListening.class));
+                        startActivity(new Intent(getApplicationContext(),NumbersWrite.class));
                         break;
                     case 4:
                         startActivity(new Intent(getApplicationContext(),AdditionalMaterial.class));
                         break;
                     case 5:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
+                        startActivity(new Intent(getApplicationContext(),TestAlphabet.class));
 
                 }
             }

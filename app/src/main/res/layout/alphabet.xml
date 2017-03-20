@@ -7,169 +7,163 @@
     android:background="@drawable/degradado"
     >
     <ImageButton
-        android:id="@+id/image_a"
+        android:id="@+id/ib_a"
         android:layout_column="0"
         android:layout_row="0"
         android:src="@drawable/a"
         android:focusable="false"
         android:backgroundTint="#7de27c" />
     <ImageButton
-        android:id="@+id/image_b"
+        android:id="@+id/ib_b"
         android:layout_column="1"
         android:layout_row="0"
         android:src="@drawable/b"
         android:backgroundTint="#b172b5" />
     <ImageButton
-        android:id="@+id/image_c"
+        android:id="@+id/ib_c"
         android:layout_column="2"
         android:layout_row="0"
         android:src="@drawable/c"
         android:backgroundTint="#f5f065" />
     <ImageButton
-        android:id="@+id/image_d"
+        android:id="@+id/ib_d"
         android:layout_column="3"
         android:layout_row="0"
         android:src="@drawable/d"
         android:backgroundTint="#5b83f3" />
     <ImageButton
-        android:id="@+id/image_e"
+        android:id="@+id/ib_e"
         android:layout_column="4"
         android:layout_row="0"
         android:src="@drawable/e"
         android:backgroundTint="#f86060" />
     <ImageButton
-        android:id="@+id/image_f"
+        android:id="@+id/ib_f"
         android:layout_column="0"
         android:layout_row="1"
         android:src="@drawable/f"
         android:backgroundTint="#f9aed8" />
     <ImageButton
-        android:id="@+id/image_g"
+        android:id="@+id/ib_g"
         android:layout_column="1"
         android:layout_row="1"
         android:src="@drawable/g"
         android:backgroundTint="#72c37b" />
     <ImageButton
-        android:id="@+id/image_h"
+        android:id="@+id/ib_h"
         android:layout_column="2"
         android:layout_row="1"
         android:src="@drawable/h"
         android:backgroundTint="#d96ff3" />
     <ImageButton
-        android:id="@+id/image_i"
+        android:id="@+id/ib_i"
         android:layout_column="3"
         android:layout_row="1"
         android:src="@drawable/i"
         android:backgroundTint="#9bd5f9" />
     <ImageButton
-        android:id="@+id/image_j"
+        android:id="@+id/ib_j"
         android:layout_column="4"
         android:layout_row="1"
         android:src="@drawable/j"
         android:backgroundTint="#b08dfb" />
     <ImageButton
-        android:id="@+id/image_k"
+        android:id="@+id/ib_k"
         android:layout_column="0"
         android:layout_row="2"
         android:src="@drawable/k"
         android:backgroundTint="#fa9965" />
     <ImageButton
-    android:id="@+id/image_l"
-    android:layout_column="1"
-    android:layout_row="2"
-    android:src="@drawable/ele"
+        android:id="@+id/ib_l"
+        android:layout_column="1"
+        android:layout_row="2"
+        android:src="@drawable/ele"
         android:backgroundTint="#faed77" />
     <ImageButton
-        android:id="@+id/image_m"
+        android:id="@+id/ib_m"
         android:layout_column="2"
         android:layout_row="2"
         android:src="@drawable/m"
         android:backgroundTint="#fc94f3" />
     <ImageButton
-        android:id="@+id/image_n"
+        android:id="@+id/ib_n"
         android:layout_column="3"
         android:layout_row="2"
         android:src="@drawable/n"
         android:backgroundTint="#83d9fb" />
     <ImageButton
-        android:id="@+id/image_o"
+        android:id="@+id/ib_o"
         android:layout_column="4"
         android:layout_row="2"
         android:src="@drawable/o"
         android:backgroundTint="#fbb8fc" />
     <ImageButton
-        android:id="@+id/image_p"
+        android:id="@+id/ib_p"
         android:layout_column="0"
         android:layout_row="3"
         android:src="@drawable/p"
         android:backgroundTint="#ea93f9" />
     <ImageButton
-        android:id="@+id/image_q"
+        android:id="@+id/ib_q"
         android:layout_column="1"
         android:layout_row="3"
         android:src="@drawable/q"
         android:backgroundTint="#eeecec" />
     <ImageButton
-        android:id="@+id/image_r"
+        android:id="@+id/ib_r"
         android:layout_column="2"
         android:layout_row="3"
         android:src="@drawable/r"
         android:backgroundTint="#f9db79" />
     <ImageButton
-        android:id="@+id/image_s"
+        android:id="@+id/ib_s"
         android:layout_column="3"
         android:layout_row="3"
         android:src="@drawable/s"
         android:backgroundTint="#cdf777" />
     <ImageButton
-        android:id="@+id/image_t"
+        android:id="@+id/ib_t"
         android:layout_column="4"
         android:layout_row="3"
         android:src="@drawable/t"
         android:backgroundTint="#fb6f6f" />
     <ImageButton
-        android:id="@+id/image_u"
+        android:id="@+id/ib_u"
         android:layout_column="0"
         android:layout_row="4"
         android:src="@drawable/u"
         android:backgroundTint="#70f98b" />
     <ImageButton
-        android:id="@+id/image_v"
+        android:id="@+id/ib_v"
         android:layout_column="1"
         android:layout_row="4"
         android:src="@drawable/v"
         android:backgroundTint="#f8ab70" />
     <ImageButton
-        android:id="@+id/image_w"
+        android:id="@+id/ib_w"
         android:layout_column="2"
         android:layout_row="4"
         android:src="@drawable/w"
         android:backgroundTint="#83c9f8" />
     <ImageButton
-        android:id="@+id/image_x"
+        android:id="@+id/ib_x"
         android:layout_column="3"
         android:layout_row="4"
         android:src="@drawable/x"
         android:backgroundTint="#96f791" />
     <ImageButton
-        android:id="@+id/image_y"
+        android:id="@+id/ib_y"
         android:layout_column="4"
         android:layout_row="4"
         android:src="@drawable/y"
         android:backgroundTint="#c09cf7" />
     <ImageButton
-        android:id="@+id/image_z"
+        android:id="@+id/ib_z"
         android:layout_column="1"
         android:layout_row="5"
         android:src="@drawable/z"
         android:backgroundTint="#f9f46b" />
-    <!--<ImageView
-        android:id="@+id/image_abc"
-        android:layout_column="1"
-        android:layout_row="5"
-        android:src="@drawable/abcd"
-        />
--->
+
 
 
 

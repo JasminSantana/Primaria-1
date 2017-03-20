@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -13,7 +15,7 @@ import mx.edu.utng.primaria.R;
 /**
  * Created by Santana on 2/1/2017.
  */
-public class Videos extends Activity {
+public class Videos extends AppCompatActivity {
     private VideoView video;
     private Resources r;
     @Override
@@ -21,6 +23,8 @@ public class Videos extends Activity {
         super.onCreate(b);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.video);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         video = (VideoView) findViewById(R.id.video);
         Bundle bundle = this.getIntent().getExtras();

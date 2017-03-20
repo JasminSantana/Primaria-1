@@ -43,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch(v.getId()){
             case R.id.bt_register:
                 register();
+
                 break;
             case R.id.tv_login:
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
@@ -62,12 +63,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if(nombreUsuario.isEmpty()&&apellidosUsuario.isEmpty()&&email.isEmpty() && password.isEmpty()){
             displayToast("Username/password/apellidos field empty");
         }else{
-
             dbLearningEnglish.addUser(nombreUsuario,apellidosUsuario,email,password);
             displayToast("User registered ");
             finish();
 
         }
+    }
+
+    public void registerActivities(){
+        dbLearningEnglish.addActivities();
+        finish();
     }
 
     private void displayToast(String message){
