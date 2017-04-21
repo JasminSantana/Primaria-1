@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_sport_figure"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/degradado_guindo"
+    android:orientation="vertical"
+    tools:context=".activities.TestSportFigure">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test of Figure and Sport"
+        android:id="@+id/tv_sport_figure"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textColor="#11f7cd"
+        android:fontFamily="monospace"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#fc99c7"
+                android:layout_width="match_parent"
+                android:id="@+id/cv_data"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What sport is?"
+                        android:id="@+id/tv_soccer_sport"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/futbol"
+                        android:id="@+id/iv_soccer"
+                        android:layout_toRightOf="@+id/tv_soccer_sport" />
+                    <RadioGroup
+                        android:id="@+id/rdgGrupoSport"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_soccer_sport"
+                        android:layout_marginBottom="10dp"
+                        android:background="#fc99c7"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Volleyball"
+                            android:id="@+id/rb_voly"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/rdgGrupoSport"
+                            android:layout_toEndOf="@+id/rdgGrupoSport" />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soccer"
+                            android:id="@+id/rb_soccer"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basketball"
+                            android:id="@+id/rb_basket"
+                            />
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#99fcf0"
+                android:layout_width="match_parent"
+                android:id="@+id/cv_data2"
+                android:layout_below="@id/cv_data"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sport that is played with a racket?"
+                        android:id="@+id/tv_racket"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/rdgDos_sport"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/tv_racket"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tennis"
+                            android:id="@+id/rb_tennis"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Golf"
+                            android:id="@+id/rb_golf_sport"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Baseball"
+                            android:id="@+id/rb_arr"
+                            android:layout_below="@+id/tv_baseball"
+
+                            />
+                    </RadioGroup>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#fcef99"
+                android:layout_width="match_parent"
+                android:id="@+id/cv_data3"
+                android:layout_below="@id/cv_data2"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What sport is *Golf* ?"
+                        android:id="@+id/tv_golf"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/rdgTres"
+                        android:layout_below="@+id/tv_golf">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_base"
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/sinbaseball"
+                            android:id="@+id/iv_base"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_swimming"
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/sinswimming"
+                            android:id="@+id/iv_swimming"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_golf"
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/singolf"
+                            android:id="@+id/iv_golf"
+                            />
+                    </RadioGroup>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#fc9e99"
+                android:layout_width="match_parent"
+                android:id="@+id/cv_data4"
+                android:layout_below="@id/cv_data3"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What sport is ?"
+                        android:id="@+id/tv_baseball"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/basquet"
+                        android:id="@+id/iv_basquet"
+                        android:layout_toRightOf="@+id/tv_baseball"
+                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdgCuatro"
+                        android:layout_below="@+id/tv_baseball"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basketball"
+                            android:id="@+id/rb_basketball_sport"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Swimming"
+                            android:id="@+id/rb_swim"
+
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Baseball"
+                            android:id="@+id/rb_baseball"
+                            />
+                    </RadioGroup>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#b399fc"
+                android:layout_width="match_parent"
+                android:id="@+id/cv_data5"
+                android:layout_below="@id/cv_data4"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Listen and select answer"
+                        android:id="@+id/tv_listening_sport"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bocina"
+                        android:id="@+id/bt_voleyball_listen"
+                        android:backgroundTint="#fdcf05"
+                        android:layout_toRightOf="@id/tv_listening_sport"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdgCinco"
+                        android:layout_below="@+id/tv_listening_sport"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Voleyball"
+                            android:id="@+id/rb_sport_voly"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tennis"
+                            android:id="@+id/rb_sport_tennis" />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Soccer"
+                            android:id="@+id/rb_sport_soccer"
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#99fce8"
+                android:id="@+id/cv_data6"
+                android:layout_below="@id/cv_data5"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" What figure is it?"
+                        android:id="@+id/tv_figure"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/hexagono"
+                        android:id="@+id/iv_hexagono"
+                        android:layout_toRightOf="@+id/tv_figure" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdgsix"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/tv_figure"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hexagon"
+                            android:id="@+id/rb_hexagon"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Oval"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nonagon" />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#fafc99"
+                android:id="@+id/cv_data7"
+                android:layout_below="@id/cv_data6"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="It has three sides, which figure is?"
+                        android:id="@+id/tv_triangle"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdgseven"
+                        android:layout_below="@+id/tv_triangle"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trapezium"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pentagon"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Triangle"
+                            android:id="@+id/rb_triangle"
+
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#99fcc9"
+                android:id="@+id/cv_data8"
+                android:layout_below="@id/cv_data7"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Which figure is a square?"
+                        android:id="@+id/tv_square"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdg_six"
+                        android:layout_below="@+id/tv_square"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/star"
+                            android:id="@+id/iv_star"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rb_square"
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/squre"
+                            android:id="@+id/iv_square"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/flecha"
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#b399fc"
+                android:id="@+id/cv_data9"
+                android:layout_below="@id/cv_data8"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="What figure is?"
+                        android:id="@+id/tv_star_figure"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/star"
+                        android:id="@+id/iv_star_figure"
+                        android:layout_toRightOf="@+id/tv_star_figure"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdg_seven"
+                        android:layout_margin="10dp"
+                        android:layout_below="@+id/tv_star_figure"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rectangle"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Star"
+                            android:id="@+id/rb_start"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Heart"
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardBackgroundColor="#f53e44"
+                android:id="@+id/cv_data10"
+                android:layout_below="@id/cv_data9"
+                android:elevation="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Listen and select you answer"
+                        android:id="@+id/tv_rectangle"
+                        android:textSize="18dp"
+                        android:textColor="#0604a1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bocina"
+                        android:id="@+id/bt_rectangle_listen"
+                        android:backgroundTint="#fdcf05"
+                        android:layout_toRightOf="@id/tv_rectangle"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rdg_nine"
+                        android:layout_below="@+id/tv_rectangle"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cross"/>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rectangle"
+                            android:id="@+id/rb_rectangle"
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Circle"
+                            />
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar/Send"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bt_finish_fs"
+                android:textColor="@color/white"
+                android:background="@drawable/button_login_form"
+                android:layout_below="@id/cv_data10"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

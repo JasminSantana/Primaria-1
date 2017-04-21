@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sport_write"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/degradado">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Write the name of sport that view"
+                android:layout_gravity="center"
+                android:textSize="10pt"
+                android:textColor="#E74C3C"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#97c0f2"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_soccer"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sinsoccer"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_soccer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_soccer"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="S _ C C _ _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_soccer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_soccer"
+                        android:layout_toRightOf="@id/iv_soccer"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_soccer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_soccer"
+                        android:layout_toRightOf="@id/iv_soccer"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#dbf871"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_tennis"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sintennise"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_tennis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_tennis"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="T _ N  _ _ S"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_tennis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_tennis"
+                        android:layout_toRightOf="@id/iv_tennis"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_tennis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_tennis"
+                        android:layout_toRightOf="@id/iv_tennis"
+                        android:gravity="center"/>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#BB8FCE"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_baseball"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sinbaseball"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_baseball"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_baseball"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="B _ S _ B _ LL"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_baseball"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_baseball"
+                        android:layout_toRightOf="@id/iv_baseball"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="8"/>
+
+                    <Button
+                        android:id="@+id/bt_baseball"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_baseball"
+                        android:layout_toRightOf="@id/iv_baseball"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F0B27A"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_golf"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/singolf"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_golf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_golf"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="G _ L _ "
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_golf"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_golf"
+                        android:layout_toRightOf="@id/iv_golf"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="5"/>
+
+                    <Button
+                        android:id="@+id/bt_golf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_golf"
+                        android:layout_toRightOf="@id/iv_golf"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#F1948A"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_basketball"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sinbasketball"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_basketball"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_basketball"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="B _ SK _ T _ ALL"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_basketball"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_basketball"
+                        android:layout_toRightOf="@id/iv_basketball"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="10"/>
+
+                    <Button
+                        android:id="@+id/bt_basketball"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_basketball"
+                        android:layout_toRightOf="@id/iv_basketball"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#82E0AA"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/iv_swimming"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sinswimming"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_swimming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_swimming"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="SW _ M _ _ NG"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_swimming"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_swimming"
+                        android:layout_toRightOf="@id/iv_swimming"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="8"/>
+
+                    <Button
+                        android:id="@+id/bt_swimming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_swimming"
+                        android:layout_toRightOf="@id/iv_swimming"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#85C1E9"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_voleiball"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sinvoleiball"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_voleibal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_voleiball"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="V _ L _ I _ _ LL"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_voleiball"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_voleibal"
+                        android:layout_toRightOf="@id/iv_voleiball"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="10"/>
+
+                    <Button
+                        android:id="@+id/bt_voleiball"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Review"
+                        android:layout_below="@id/et_voleiball"
+                        android:layout_toRightOf="@id/iv_voleiball"
+                        android:gravity="center"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

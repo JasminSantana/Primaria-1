@@ -46,6 +46,7 @@
     <string name="fragment_gallery1">Fragment gallery</string>
     <string name="open_drawer">Open navegation drawer</string>
     <string name="close_drawer">close navigation drawer</string>
+    <string name="what_is">WHAT IS?</string>
     <string-array name="countries">
         <item>Mexico</item>
         <item>United States</item>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+     
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'TEST');
+      data.addColumn('number', 'VALUE');
+      data.addRows([
+        ['Test 1', 23],
+        ['Test 2', 89],
+        ['Test 3', 12], 
+        ['Test 4', 12],
+        ['Test 5', 20],
+		['Test Final', 19]
+      ]);
+
+      var options = {'title':'Learning english punctuation',
+                     'width':600,
+                     'height':600};
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div" style="width:600; height:600"></div>
+  </body>
+</html>

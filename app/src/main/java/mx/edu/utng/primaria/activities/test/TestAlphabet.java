@@ -1,9 +1,17 @@
 package mx.edu.utng.primaria.activities.test;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,6 +20,8 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import mx.edu.utng.primaria.R;
+import mx.edu.utng.primaria.menu.MainActivity;
+import mx.edu.utng.primaria.sqlite.DbHelper;
 
 public class TestAlphabet extends AppCompatActivity implements View.OnClickListener {
     private RadioButton rbGii;
@@ -26,6 +36,11 @@ public class TestAlphabet extends AppCompatActivity implements View.OnClickListe
     private  RadioButton rbSeven;
     private RadioButton rbOne;
     private Button btEnviar;
+    private DbHelper db;
+    private String idUser;
+    private final static String SETTING_USER = "setting_user";
+    private String user;
+    SharedPreferences sharedPreferences;
 
 
     @Override
@@ -44,7 +59,7 @@ public class TestAlphabet extends AppCompatActivity implements View.OnClickListe
         rbFive=(RadioButton)findViewById(R.id.rb_number_five);
         rbFour=(RadioButton)findViewById(R.id.rb_number_four);
         rbSix=(RadioButton)findViewById(R.id.rb_number_six);
-        rbSeven=(RadioButton)findViewById(R.id.rb_seven);
+        rbSeven=(RadioButton)findViewById(R.id.rb_number_seven);
         rbOne=(RadioButton)findViewById(R.id.rb_number_one);
         rbLetterP=(RadioButton)findViewById(R.id.rb_letter_p);
         btPi=(ImageButton)findViewById(R.id.bt_pi);
@@ -66,7 +81,7 @@ public class TestAlphabet extends AppCompatActivity implements View.OnClickListe
 
         btEnviar.setOnClickListener(this);
 
-
+        db = new DbHelper(this);
 
 
     }
@@ -100,11 +115,47 @@ public class TestAlphabet extends AppCompatActivity implements View.OnClickListe
         }if (rbOne.isChecked()){
             scoreTest=scoreTest+1;
         }
-
         //query para la base de datos
+        Double scoreFinal = scoreTest;
         if (btEnviar.isPressed()){
-            Toast toast =Toast.makeText(this,"Enviar "+scoreTest,Toast.LENGTH_SHORT);
-            toast.show();
+            sharedPreferences = getApplicationContext().getSharedPreferences("recuperardatos", Context.MODE_PRIVATE);
+            user = sharedPreferences.getString(SETTING_USER,"");
+             idUser = db.getIdUser(user);
+            Log.i("el id del usuario es: ", idUser);
+            String data = db.getScore(idUser, 1);
+            if(data!=null){
+                db.updateScore(idUser,1,String.valueOf(scoreTest));
+            }else{
+                db.addScore(String.valueOf(scoreTest),idUser,1);
+            }
+            //Toast.makeText(this, "el email es: "+ user + "el usuario es: "+idUser, Toast.LENGTH_SHORT).show();
+            if (scoreTest>=8) {
+                final AlertDialog.Builder builder = new AlertDialog.Builder(TestAlphabet.this);
+                builder.setTitle(Html.fromHtml("<font color='#FF0000'><b>¡ F E L I C I D A D E S ! </b></font>"))
+                        .setIcon(getResources().getDrawable(R.drawable.winner_acv))
+                        .setMessage("HAS CONCLUIDO LA ACTIVIDAD ALPHABET AND COLORS," +
+                                " AHORA PUEDES SEGUIR CON LA SIGUIENTE ACTIVIDAD:" +
+                                Html.fromHtml("<b>ANIMALS AND COLORS.</b>"))
+                        .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            }
+                        });
+                builder.show();
+            }else{
+                final AlertDialog.Builder builderFather = new AlertDialog.Builder(TestAlphabet.this);
+                builderFather.setTitle(Html.fromHtml("<font color='#FF0000'><b>¡ I N C O R R E C T O ! </b></font>"))
+                        .setIcon(getResources().getDrawable(R.drawable.winner_acv))
+                        .setMessage("LO SENTIMOS, PARA PODER PASAR ESTE TEST TIENES QUE " +
+                                "OBTENER UNA CALIFICACION MAYOR Ó IGUAL A 8, TU CALIFICACIÓN " +
+                                "ACTUAL ES: " + scoreFinal)
+                        .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                builderFather.show();
+            }
         }
     }
 }

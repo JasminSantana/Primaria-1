@@ -33,7 +33,9 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import mx.edu.utng.primaria.DragDrop;
 import mx.edu.utng.primaria.activities.AboutActivity;
+import mx.edu.utng.primaria.activities.MonthsSeasons;
 import mx.edu.utng.primaria.activities.Objects;
 import mx.edu.utng.primaria.activities.TableroLogros;
 import mx.edu.utng.primaria.login.PrefManager;
@@ -55,24 +57,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ImageButton ibActivity3;
     private ImageButton ibActivity4;
     private ImageButton ibActivity5;
+    private ImageButton ibActivity6;
     private ImageView ivTest;
     private TextView tvAbNu;
     private TextView tvAnCo;
     private TextView tvFaRo;
     private TextView tvFgDe;
     private TextView tvObCa;
+    private TextView tvMonSea;
     private Session session;
-
-    private final static String SETTING_USER = "setting_user";
-    private final static String SETTING_ID = "setting_id";
-    private String user;
-    private String idUser;
-    private String hola;
-    SharedPreferences sharedPreferences1;
-    SharedPreferences sharedPreferences;
     DbHelper helper;
-
-    private int califTest=8;
+    private String idUser;
+    private final static String SETTING_USER = "setting_user";
+    private String user;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,58 +88,78 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ibActivity3 = (ImageButton)findViewById(R.id.ib_activity_3);
         ibActivity4 = (ImageButton)findViewById(R.id.ib_activity_4);
         ibActivity5 = (ImageButton)findViewById(R.id.ib_activity_5);
+        ibActivity6 = (ImageButton)findViewById(R.id.ib_activity_6);
         ivTest =(ImageView)findViewById(R.id.iv_certificate);
         tvAbNu = (TextView)findViewById(R.id.tv_al_nu);
         tvAnCo = (TextView)findViewById(R.id.tv_an_co);
         tvFaRo = (TextView)findViewById(R.id.tv_fa_ro);
         tvFgDe = (TextView)findViewById(R.id.tv_fg_de);
         tvObCa = (TextView)findViewById(R.id.tv_ob_ca);
+        tvMonSea = (TextView)findViewById(R.id.tv_mon_sea);
         tvAbNu.setText("Alphabet\nNumbers");
         tvAnCo.setText("Animal\nColors");
         tvFaRo.setText("Family\nClothes");
         tvFgDe.setText("Geometric Figures\nSports");
-        tvObCa.setText("Objects");
+        tvObCa.setText("Objects\nDays of the Week");
+        tvMonSea.setText("Mounth\nSeasons");
 
-        /*int score = 0;
-        try{
-            SQLiteDatabase db = new DbHelper(MainActivity.this).getReadableDatabase();
-            String selectQueryScore = "select COLUMN_SCORE_SCORE from SCORE_TABLE where COLUMN_SCORE_SCORE >= " +
-                    "" + "'"+califTest+"'" + " and  COLUMN_EMAIL = " + "'"+user+"'" + " and COLUMN_PASSWORD = " + "'"+pass+"'";
+        helper = new DbHelper(this);
+        sharedPreferences = getApplicationContext().getSharedPreferences("recuperardatos", Context.MODE_PRIVATE);
+        user = sharedPreferences.getString(SETTING_USER,"");
+        idUser = helper.getIdUser(user);
+        String calif1 = helper.getScore(idUser, 1);
+        String calif2 = helper.getScore(idUser, 2);
+        String calif3 = helper.getScore(idUser, 3);
+        String calif4 = helper.getScore(idUser, 4);
+        String calif5 = helper.getScore(idUser, 5);
+        String calif6 = helper.getScore(idUser, 6);
+        String calif7 = helper.getScore(idUser, 7);
+        //String calif8 = helper.getScore(idUser, 8);
 
-            Cursor cursor = db.rawQuery(selectQueryScore, null);
-            cursor.moveToFirst();
-            //score=cursor.getCount();
-            score=cursor.getInt(califTest);
-        }catch (Exception e){
-            Log.d("Exception ->", score +  "");
-        }*/
+        if(calif1==null || Double.valueOf(calif1) < 8){
+            ibActivity2.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif1) >= 8){
+            ibActivity2.setBackgroundResource(R.drawable.button_circle);
+        }
+        if(calif2==null || Double.valueOf(calif2) < 8){
+            ibActivity3.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif2) >= 8){
+            ibActivity3.setBackgroundResource(R.drawable.button_circle);
+        }
+        if(calif3==null || Double.valueOf(calif3) < 8){
+            ibActivity4.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif3) >= 8){
+            ibActivity4.setBackgroundResource(R.drawable.button_circle);
+        }
+        if(calif4==null || Double.valueOf(calif4) < 8){
+            ibActivity5.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif4) >= 8){
+            ibActivity5.setBackgroundResource(R.drawable.button_circle);
+        }
+        if(calif5==null || Double.valueOf(calif5) < 8){
+            ibActivity6.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif5) >= 8){
+            ibActivity6.setBackgroundResource(R.drawable.button_circle);
+        }
+        if(calif6==null || Double.valueOf(calif6) < 8){
+            ivTest.setBackgroundResource(R.drawable.button_unactivated);
+        }else if(Double.valueOf(calif7) >= 8){
+            ivTest.setBackgroundResource(R.drawable.button_circle);
+        }
 
         ibActivity1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
-                if(ibActivity1.isPressed()){
-                    ibActivity1.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
                 startActivity(new Intent(getApplicationContext(),AlphabetNumbers.class));
             }
         });
 
-        //final int finalScore = score;
         ibActivity2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(ibActivity2.isClickable()){
-                    ibActivity2.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
-
-                Random r = new Random();
-                int calif = r.nextInt(10);
-                if (calif >= califTest) {
-
-                    startActivity(new Intent(getApplicationContext(),AnimalsColors.class));
-                   Toast.makeText(MainActivity.this, "Calif= "+calif, Toast.LENGTH_SHORT).show();
-                }else {
-                   AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                String calif = helper.getScore(idUser, 1);
+               // if (calif==null || Double.valueOf(calif) < 8) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Complete previous activities into unlock this one.")
                             .setTitle("Blocked Activity 2").setIcon(R.drawable.logo)
                             .setNegativeButton("to accept", new DialogInterface.OnClickListener() {
@@ -150,24 +168,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                     builder.show();
-                    Toast.makeText(MainActivity.this, " usuario: "+calif, Toast.LENGTH_SHORT).show();
-                }
+                //}else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),AnimalsColors.class));
+                //}
             }
         });
 
         ibActivity3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ibActivity3.isClickable()){
-                    ibActivity3.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
-                Random r = new Random();
-                int calif = r.nextInt(10);
-
-                if (calif >= califTest) {
-                    startActivity(new Intent(getApplicationContext(),FamilyClothes.class));
-                    Toast.makeText(MainActivity.this, "Calif= "+calif, Toast.LENGTH_SHORT).show();
-                }else {
+                String calif = helper.getScore(idUser,2);
+               // if (calif==null || Double.valueOf(calif) < 8) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Complete previous activities into unlock this one.")
                             .setTitle("Blocked Activity 3").setIcon(R.drawable.logo)
@@ -177,23 +188,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                     builder.show();
-                }
+                //}else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),FamilyClothes.class));
+                //}
             }
         });
 
         ibActivity4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ibActivity4.isClickable()){
-                    ibActivity4.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
-                Random r = new Random();
-                int calif = r.nextInt(10);
-
-                if (calif >= califTest) {
-                    startActivity(new Intent(getApplicationContext(),GeoFigSports.class));
-                    Toast.makeText(MainActivity.this, "Calif= "+calif, Toast.LENGTH_SHORT).show();
-                }else {
+                String calif = helper.getScore(idUser,3);
+               // if (calif==null || Double.valueOf(calif) < 8) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Complete previous activities into unlock this one.")
                             .setTitle("Blocked Activity 4").setIcon(R.drawable.logo)
@@ -203,23 +208,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                     builder.show();
-                }
+                //}else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),GeoFigSports.class));
+                //}
             }
         });
 
         ibActivity5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ibActivity5.isClickable()){
-                    ibActivity5.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
-                Random r = new Random();
-                int calif = r.nextInt(10);
-
-                if (calif >= califTest) {
-                    startActivity(new Intent(getApplicationContext(),Objects.class));
-                    Toast.makeText(MainActivity.this, "Calif= "+calif, Toast.LENGTH_SHORT).show();
-                }else {
+                String calif = helper.getScore(idUser,4);
+                //if (calif==null || Double.valueOf(calif) < 8) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Complete previous activities into unlock this one.")
                             .setTitle("Blocked Activity 5").setIcon(R.drawable.logo)
@@ -229,24 +228,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                     builder.show();
-                }
+                //}else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),Objects.class));
+                //}
+            }
+        });
+
+        ibActivity6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String calif = helper.getScore(idUser,5);
+               // if (calif==null || Double.valueOf(calif) < 8) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setMessage("Complete previous activities into unlock this one.")
+                            .setTitle("Blocked Activity 6").setIcon(R.drawable.logo)
+                            .setNegativeButton("to accept", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    builder.show();
+               // }else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),MonthsSeasons.class));
+                //}
             }
         });
 
         ivTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ivTest.isClickable()){
-                    ivTest.setBackgroundResource(R.drawable.btn_circulo_focussed);
-                }
-                Random r = new Random();
-                int calif = r.nextInt(10);
-
-                if (calif >= califTest) {
-                    startActivity(new Intent(getApplicationContext(),Test.class));
-                    Toast.makeText(MainActivity.this, "Calif= "+calif, Toast.LENGTH_SHORT).show();
-                }else {
-
+                String calif = helper.getScore(idUser,7);
+               // if (calif==null || Double.valueOf(calif) < 8) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setMessage("Perform the previous activities first, to perform the final test")
                             .setTitle("Final test blocked").setIcon(R.drawable.logo)
@@ -256,7 +268,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 }
                             });
                     builder.show();
-                }
+                //}else if(Double.valueOf(calif) >= 8){
+                    startActivity(new Intent(getApplicationContext(),Test.class));
+               // }
             }
         });
 
@@ -341,8 +355,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }else if (id==R.id.nav_logro){
             PrefManager prefManager = new PrefManager(getApplicationContext());
             prefManager.setFirstTimeLaunch(true);
-            session.setLoggedin(false);
-            finish();
+            session.setLoggedin(true);
+            //finish();
             startActivity(new Intent(MainActivity.this,TableroLogros.class));
 
         }else if (id==R.id.nav_exit){
@@ -355,8 +369,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }else if(id==R.id.nav_about){
             PrefManager prefManager = new PrefManager(getApplicationContext());
             prefManager.setFirstTimeLaunch(true);
-            session.setLoggedin(false);
-            finish();
+            session.setLoggedin(true);
+            //finish();
             startActivity(new Intent(MainActivity.this,AboutActivity.class));
         }
         if (fragmentTransaction){

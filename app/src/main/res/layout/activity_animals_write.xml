@@ -1,0 +1,699 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Write the name of the animal that are"
+                android:layout_gravity="center"
+                android:textSize="10pt"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textColor="@color/dot_dark_screen2"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/dot_light_screen3"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_rabbit"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/rabbitpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_rabbit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_rabbit"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="R _ _ I _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_rabbit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_rabbit"
+                        android:layout_toRightOf="@id/iv_rabbit"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_rabbit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_rabbit"
+                        android:layout_toRightOf="@id/iv_rabbit"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/bg_screen2"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_bee"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/beepregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_bee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_bee"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="_ _ E"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_bee"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_bee"
+                        android:layout_toRightOf="@id/iv_bee"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="7"/>
+
+                    <Button
+                        android:id="@+id/bt_bee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_bee"
+                        android:layout_toRightOf="@id/iv_bee"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/bg_screen3"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_sheep"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/borregapregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_sheep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_sheep"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="S _ _ E_"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_sheep"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_sheep"
+                        android:layout_toRightOf="@id/iv_sheep"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="4"/>
+
+                    <Button
+                        android:id="@+id/bt_sheep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_sheep"
+                        android:layout_toRightOf="@id/iv_sheep"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/dot_light_screen2"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_butherfly"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/butherflypregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_butherfly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_butherfly"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="B _ T _ E R _ _ Y"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_butherfly"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_butherfly"
+                        android:layout_toRightOf="@id/iv_butherfly"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_butherfly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_butherfly"
+                        android:layout_toRightOf="@id/iv_butherfly"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_cat"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/catpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_cat"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="_ _ T"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_cat"
+                        android:layout_toRightOf="@id/iv_cat"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_cat"
+                        android:layout_toRightOf="@id/iv_cat"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="#82E0AA"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_dog"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/dogpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_dog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_dog"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="D _ _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_dog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_dog"
+                        android:layout_toRightOf="@id/iv_dog"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                    <Button
+                        android:id="@+id/bt_dog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_dog"
+                        android:layout_toRightOf="@id/iv_dog"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="#85C1E9"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_horse"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/horse"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_horse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_horse"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="H _ _ S _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_horse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_horse"
+                        android:layout_toRightOf="@id/iv_horse"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_horse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_horse"
+                        android:layout_toRightOf="@id/iv_horse"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/dot_light_screen1"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_pig"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/pigpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_pig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_pig"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="_ I _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_pig"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_pig"
+                        android:layout_toRightOf="@id/iv_pig"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_pig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_pig"
+                        android:layout_toRightOf="@id/iv_pig"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/dot_light_screen4"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_lion"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/lionpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_lion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_lion"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="_ I _ _"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_lion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_lion"
+                        android:layout_toRightOf="@id/iv_lion"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_lion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_lion"
+                        android:layout_toRightOf="@id/iv_lion"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/colorPrimary"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_monkey"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/monkey_pregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_monkey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_monkey"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="M _ _ K _ Y"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_monkey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_monkey"
+                        android:layout_toRightOf="@id/iv_monkey"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_monkey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_monkey"
+                        android:layout_toRightOf="@id/iv_monkey"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="14dp"
+                card_view:cardBackgroundColor="@color/dot_light_screen3"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_snail"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/snailpregunta"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:id="@+id/tv_question_snail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_snail"
+                        android:layout_marginTop="15dp"
+                        android:textSize="10pt"
+                        android:text="S _ A _L"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/et_snail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question_snail"
+                        android:layout_toRightOf="@id/iv_snail"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                    <Button
+                        android:id="@+id/bt_snail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="verificar"
+                        android:layout_below="@id/et_snail"
+                        android:layout_toRightOf="@id/iv_snail"
+                        android:gravity="center"
+                        android:textColor="@color/enable"
+                        android:textSize="15dp"
+                        android:background="@drawable/button_login_form"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

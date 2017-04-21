@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/deportes"
+    tools:context=".activities.listener.Sport">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anterior"
+            android:textColor="@color/red"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/bt_anterior"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:textColor="@color/red"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/bt_siguiente"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Sports"
+            android:textColor="@color/blue"
+            android:background="@color/colorAccent"
+            android:textSize="10pt"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/tv_name_sport"/>
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bocina"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_sports_listen"/>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_sports"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="45dp"
+        android:background="@color/blue"
+        android:src="@drawable/voleiball"/>
+
+</RelativeLayout>

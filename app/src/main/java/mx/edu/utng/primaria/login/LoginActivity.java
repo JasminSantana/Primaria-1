@@ -48,6 +48,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(new Intent(LoginActivity.this,WelcomeActivity.class));
             finish();
         }
+
+        //Si hemos abierto correctamente la base de datos
+        db.addActivities();
     }
 
 
@@ -56,6 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch(v.getId()){
             case R.id.bt_login:
                 login();
+               // registerActivities();
                 break;
             case R.id.bt_register:
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));

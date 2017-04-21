@@ -14,6 +14,9 @@ import java.util.List;
 
 import mx.edu.utng.primaria.R;
 import mx.edu.utng.primaria.activities.listener.NumbersListening;
+import mx.edu.utng.primaria.activities.listener.Sport;
+import mx.edu.utng.primaria.activities.test.TestSportFigure;
+import mx.edu.utng.primaria.activities.write.SportWrite;
 import mx.edu.utng.primaria.adapters.ActivitiesAdapter;
 import mx.edu.utng.primaria.model.Activities;
 
@@ -52,20 +55,20 @@ public class GeoFigSports extends ActionBarActivity {
                        // startActivity(new Intent(getApplicationContext(),AlphabetListening.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getApplicationContext(),NumbersListening.class));
+                        startActivity(new Intent(getApplicationContext(),Sport.class));
                         break;
                     case 2:
-                        startActivity(new Intent(getApplicationContext(),AdditionalMaterial.class));
+                       // startActivity(new Intent(getApplicationContext(),AdditionalMaterial.class));
                         break;
-                   /* case 3:
-                        startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
+                    case 3:
+                        startActivity(new Intent(getApplicationContext(),SportWrite.class));
                         break;
                     case 4:
-                        startActivity(new Intent(getApplicationContext(),Resources.class));
+                        //startActivity(new Intent(getApplicationContext(),Resources.class));
                         break;
                     case 5:
-                        startActivity(new Intent(getApplicationContext(),Test.class));
-                        break;*/
+                        startActivity(new Intent(getApplicationContext(),TestSportFigure.class));
+                        break;
                 }
             }
         });

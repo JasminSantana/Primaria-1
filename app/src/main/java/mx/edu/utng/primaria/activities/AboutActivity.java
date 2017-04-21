@@ -1,5 +1,6 @@
 package mx.edu.utng.primaria.activities;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -13,6 +14,10 @@ import android.widget.Toast;
 
 
 import mx.edu.utng.primaria.R;
+import mx.edu.utng.primaria.login.LoginActivity;
+import mx.edu.utng.primaria.login.Session;
+import mx.edu.utng.primaria.menu.MainActivity;
+
 /**
  * Created by Santana on 2/25/2017.
  */
@@ -22,6 +27,7 @@ public class AboutActivity  extends AppCompatActivity implements View.OnClickLis
     private int seek;
     private ImageView ivLogo;
     private TextView tvPablo;
+    private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,17 @@ public class AboutActivity  extends AppCompatActivity implements View.OnClickLis
         ivLogo=(ImageView)findViewById(R.id.iv_logo_about);
         //ivLogo.setOnClickListener(this);
 
+        session = new Session(this);
+
+        if(!session.loggedin()){
+            logout();
+        }
+
+    }
+    private void logout(){
+        session.setLoggedin(false);
+        finish();
+        startActivity(new Intent(AboutActivity.this,MainActivity.class));
     }
 
     protected void onResume(){

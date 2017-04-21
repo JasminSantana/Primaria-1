@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_drag_drop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mx.edu.utng.primaria.DragDrop"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_description_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrastra y Suelta el texto correspondiente de acuerdo a la imagen"
+        android:textSize="20sp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abcd"
+        android:layout_below="@+id/tv_description_"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_insert_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="insert text"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_col"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/bt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Alphabet"
+            android:background="@color/dot_dark_screen1"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/bt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_1"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Sport"
+            android:background="@color/dot_dark_screen1"
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/bt_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_2"
+            android:text="Color"
+            android:background="@color/dot_dark_screen1"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

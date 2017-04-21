@@ -1,0 +1,501 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/animals"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:numColumns="auto_fit"
+        android:columnCount="4"
+        android:rowCount="6"
+        android:paddingTop="45dp"
+        >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_rabbit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_rabbit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rabbitpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_rabbit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="RABBIT"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_rabbit"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_bee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_bee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/beepregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_bee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="BEE"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_bee"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_sheep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="2"
+            android:layout_row="0"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_sheep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/borregapregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sheep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="SHEEP"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_sheep"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_butherfly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_butherfly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/butherflypregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_butherfly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="BUTHERFLY"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_butherfly"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/catpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="CAT"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_cat"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_dog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_dog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dogpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_dog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="DOG"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_dog"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_horse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_horse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/horse"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_horse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="HORSE"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_horse"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_pig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_pig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rabbitpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="PIG"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_pig"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_lion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_lion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lionpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_lion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="LION"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_lion"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_monkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_monkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/monkey_pregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_monkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="MONKEY"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_monkey"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_snail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="14dp"
+            card_view:cardBackgroundColor="#00ffffff"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_snail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/snailpregunta"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_snail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13pt"
+                    android:text="SNAIL"
+                    android:textStyle="bold"
+                    android:textColor="@color/fb"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/iv_snail"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </GridLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

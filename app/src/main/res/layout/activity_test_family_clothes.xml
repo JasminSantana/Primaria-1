@@ -1,0 +1,587 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_belt"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/belt"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_belt"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="¿QUE SE VISUALIZA EN LA IMAGEN?"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/iv_belt"
+                        android:layout_below="@id/tv_question"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BELT"
+                            android:id="@+id/rb_belt"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SWEATER"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHOES"
+                            android:layout_marginBottom="7dp"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_hat"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/hat"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_question2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_hat"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="¿QUÉ SE VISUALIZA EN LA IMAGEN?"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/rdghat"
+                        android:layout_toRightOf="@id/iv_hat"
+                        android:layout_below="@id/tv_question2"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="T-SHIRT"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JACKET"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HAT"
+                            android:id="@+id/rb_hat"
+                            android:layout_marginBottom="7dp"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_shorts"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/shorts"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_shorts"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="¿QUÉ SE VISUALIZA EN LA IMAGEN?"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/rdg_shorts"
+                        android:layout_toRightOf="@id/iv_shorts"
+                        android:layout_below="@id/tv_question4"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CAP"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PURPLE"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHORTS"
+                            android:id="@+id/rb_shorts"
+                            android:layout_marginBottom="7dp"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_socks"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/socks"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_socks"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="¿QUÑE SE VISUALIZA EN LA IMAGEN?"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/iv_socks"
+                        android:layout_below="@id/tv_question8"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SOCKS"
+                            android:id="@+id/rb_socks"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PILAMA"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BOOTS"
+                            android:layout_marginBottom="7dp"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_sweater"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sweater"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_sweater"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="¿QUÉ E VISUALIZA EN LA IMAGEN?"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/iv_sweater"
+                        android:layout_below="@id/tv_question10"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHOES"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SWEATER"
+                            android:id="@+id/rb_sweater"
+                            android:layout_marginBottom="7dp"/>
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PANTS"/>
+
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_mother_t"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mother"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_mother_t"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="Escribe el nombre del inegrante de la familia"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_mother_t"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question5"
+                        android:layout_toRightOf="@id/iv_mother_t"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_family_father"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/father"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_question6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_family_father"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="Escribe el nombre del inegrante de la familia"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_family_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question6"
+                        android:layout_toRightOf="@id/iv_family_father"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_family_aunt"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/aunt"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_question3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_family_aunt"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="Escribe el nombre del inegrante de la familia"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_family_aunt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question3"
+                        android:layout_toRightOf="@id/iv_family_aunt"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="4"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_family_grandfather"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/grandfather"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_family_grandfather"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="Escribe el nombre del inegrante de la familia"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_family_grandfather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question9"
+                        android:layout_toRightOf="@id/iv_family_grandfather"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="11"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_family_sister"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sister"
+                        android:adjustViewBounds="true"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/tv_question7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_family_sister"
+                        android:layout_marginTop="15dp"
+                        android:textSize="9pt"
+                        android:text="Escribe el nombre del inegrante de la familia"
+                        android:paddingLeft="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/et_family_sister"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tv_question7"
+                        android:layout_toRightOf="@id/iv_family_sister"
+                        android:layout_marginTop="25dp"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/iv_send_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send_button"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

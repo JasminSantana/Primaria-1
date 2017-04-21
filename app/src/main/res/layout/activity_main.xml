@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     android:id="@+id/drawer_layout"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fond_screen">
 
     <include layout="@layout/app_bar_main"
         android:layout_width="match_parent"

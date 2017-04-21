@@ -13,6 +13,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -29,14 +30,11 @@ private RadioButton rbRed, rb15,rbGreen,rbFather,rbA,rbMother,rbDog,rbCircle,rbF
     private CheckBox rbFootball,rbTennis,rbBasketball;
     private ImageButton btEm,btDog,btCircle;
     private Button btSend;
-    private final static String SETTING_USER = "setting_user";
-    private final static String SETTING_ID = "setting_id";
-    private String user;
+    private DbHelper db;
     private String idUser;
+    private final static String SETTING_USER = "setting_user";
+    private String user;
     SharedPreferences sharedPreferences;
-    SharedPreferences sharedPreferences1;
-    DbHelper bd;
-    int secondsDelayed = 2000;
     double scoreTest=0;
 
     @Override
@@ -83,23 +81,7 @@ private RadioButton rbRed, rb15,rbGreen,rbFather,rbA,rbMother,rbDog,rbCircle,rbF
         btCircle.setOnClickListener(this);
         btSend.setOnClickListener(this);
 
-        bd = new DbHelper(this);
-
-      /* btEm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Context context=getApplicationContext();
-                Toast toast;
-                CharSequence charSequence;
-                String text;
-                int duration=Toast.LENGTH_SHORT;
-                charSequence="Button c2 clicked!";
-
-                toast =Toast.makeText(context,charSequence,duration);
-                toast.show();
-            }
-        });
-*/
+        db = new DbHelper(this);
     }
 
     @Override
@@ -158,31 +140,17 @@ private RadioButton rbRed, rb15,rbGreen,rbFather,rbA,rbMother,rbDog,rbCircle,rbF
             mp.start();
         }
         if(btSend.isPressed()){
-            /*
             sharedPreferences = getApplicationContext().getSharedPreferences("recuperardatos", Context.MODE_PRIVATE);
             user = sharedPreferences.getString(SETTING_USER,"");
-            idUser = bd.getIdUser(user);
-
-            sharedPreferences1 = getApplicationContext().getSharedPreferences("recuperardatos1", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences1.edit();
-            editor.putString(SETTING_ID, idUser);
-            editor.commit();
-
-            sharedPreferences1 = getApplicationContext().getSharedPreferences("recuperardatos1", Context.MODE_PRIVATE);
-            idUser = sharedPreferences1.getString(SETTING_ID,"");
-
-            bd.addScore(String.valueOf(scoreTest),idUser,1);
-
-            bd.getScore(idUser,1);
-            final String datos = bd.getScore(idUser,1); */
-
-
-            //Toast  toast =Toast.makeText(this,"Enviar "+idUser,Toast.LENGTH_SHORT);
-            //toast.show();
-            //Toast.makeText(this, "jejeje: " + datos, Toast.LENGTH_SHORT).show();
+            idUser = db.getIdUser(user);
+            Log.i("el id del usuario es ", idUser);
+            String data = db.getScore(idUser, 8);
+            if(data!=null){
+                db.updateScore(idUser,8,String.valueOf(scoreTest));
+            }else{
+                db.addScore(String.valueOf(scoreTest),idUser,8);
+            }
             if(scoreTest>=8){
-                new Handler().postDelayed(new Runnable() {
-                    public void run() {
                         final AlertDialog.Builder builder = new AlertDialog.Builder(Test.this);
                         builder.setTitle(Html.fromHtml("<font color='#FF0000'><b>¡ F E L I C I D A D E S ! </b></font>"))
                                 .setIcon(getResources().getDrawable(R.drawable.winner_acv))
@@ -194,12 +162,7 @@ private RadioButton rbRed, rb15,rbGreen,rbFather,rbA,rbMother,rbDog,rbCircle,rbF
                                     }
                                 });
                         builder.show();
-                    }
-                }, secondsDelayed);
             }else{
-                //Toast.makeText(this, "esta mal escrito", Toast.LENGTH_LONG).show();
-                new Handler().postDelayed(new Runnable() {
-                    public void run() {
                         final AlertDialog.Builder builderFather = new AlertDialog.Builder(Test.this);
                         builderFather.setTitle(Html.fromHtml("<font color='#FF0000'><b>¡ I N C O R R E C T O ! </b></font>"))
                                 .setIcon(getResources().getDrawable(R.drawable.winner_acv))
@@ -212,8 +175,6 @@ private RadioButton rbRed, rb15,rbGreen,rbFather,rbA,rbMother,rbDog,rbCircle,rbF
                                     }
                                 });
                         builderFather.show();
-                    }
-                }, secondsDelayed);
             }
             }
 

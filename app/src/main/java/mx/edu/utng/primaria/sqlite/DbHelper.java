@@ -72,14 +72,11 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onOpen(SQLiteDatabase db) {
         super.onOpen(db);
         if(!db.isReadOnly()){
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
-                db.setForeignKeyConstraintsEnabled(true);
-            }else{
-                db.execSQL("PRAGMA foreign_keys=ON");
+            if(!db.isReadOnly()){
+                db.execSQL("PRAGMA foreign_keys=ON;");
             }
         }
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -104,46 +101,36 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(COLUMN_APELLIDOS_USUARIO, apellidos_usuario);
         values.put(COLUMN_EMAIL, email);
         values.put(COLUMN_PASSWORD, password);
-
         long id = db.insert(USER_TABLE, null, values);
         db.close();
-
-        Log.d(TAG, "user inserted" + id);
-
+        Log.d(TAG, "user inserted: " + id);
     }
 
     public boolean getUser(String email, String pass){
-
         String selectQuery = "select * from  " + USER_TABLE + " where " +
                 COLUMN_EMAIL + " = " + "'"+email+"'" + " and " + COLUMN_PASSWORD + " = " + "'"+pass+"'";
-
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
-
             return true;
         }
         cursor.close();
         db.close();
-
         return false;
     }
+
     public boolean getEmails(String email){
         String selectQuery="select "+COLUMN_EMAIL+" from "+ USER_TABLE +" where "+COLUMN_EMAIL+ " = "+"'"+email+"';";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
-
             return true;
         }
         cursor.close();
         db.close();
-
         return false;
-
     }
 
     public String getIdUser(String idEmail){
@@ -158,28 +145,25 @@ public class DbHelper extends SQLiteOpenHelper {
         //}
         cursor.close();
         db.close();
-
         return codigo;
-
     }
-
 
     // este metodo retorna el score asociado al usuario y actividad especifica
     public String getScore(String idUser, int idActivity){
+        String data = null;
         String selectQuery="select "+COLUMN_SCORE_SCORE+" from "+ SCORE_TABLE +" where "+COLUMN_ID+ " = "+"'"+idUser+"' and "+COLUMN_ACTIVITY_ID+" = "+idActivity+";";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
-        //String ola ="";
-        cursor.moveToFirst();
+        if(cursor.moveToFirst()){
+            do{
+                cursor.moveToFirst();
                 String score= cursor.getString(0);
-                //String idUsers = cursor.getString(1);
-                //String idActivitie = cursor.getString(2);
-        //String resultado =
+                data = score;
+            }while(cursor.moveToNext());
+        }
         cursor.close();
         db.close();
-
-        return score;
-
+        return data;
     }
 
     //este metodo agrega a el score idusuario y idactividad a la tabla escore
@@ -189,48 +173,55 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put(COLUMN_SCORE_SCORE, score);
         values.put(COLUMN_ID, idUser);
         values.put(COLUMN_ACTIVITY_ID, idActivity);
-
         long id = db.insert(SCORE_TABLE, null, values);
         db.close();
+        Log.d(TAG, "score inserted: " + id);
+    }
 
-        Log.d(TAG, "user inserted" + id);
-
+    public void updateScore(String idUser, int idActivity,String score){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_SCORE_SCORE, score);
+        long id =  db.update(SCORE_TABLE,values,COLUMN_ID + " = " + idUser + " and " +
+                COLUMN_ACTIVITY_ID + " = " + idActivity,null);
+        db.close();
+        Log.d(TAG, "score updated: " + id);
     }
 
     public String getActivities(){
         String data=null;
-        String selectQuery="select "+COLUMN_ACTIVITY_ID+", "+COLUMN_NAME_ACTIVITY+" from "+ ACTIVITY_TABLE + ";";
+        String selectQuery="select "+ COLUMN_ACTIVITY_ID +" from "+ ACTIVITY_TABLE + ";";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
+        //cursor.moveToFirst();
         if(cursor.moveToFirst()){
             do{
-        cursor.moveToFirst();
                 String activityId = cursor.getString(0);
-             //   String activityName = cursor.getString(1);
-
                  data = activityId;
             }while(cursor.moveToNext());
         }
         cursor.close();
-        //db.close();
         return data;
     }
 
-    public int addActivities (){
+
+    public void addActivities (){
         int idActivity = 0;
         SQLiteDatabase db = getWritableDatabase();
-        if(getActivities()==null) {
-            ContentValues values = new ContentValues();
-            values.put(COLUMN_NAME_ACTIVITY, "Alphabet and Numbers");
-            values.put(COLUMN_NAME_ACTIVITY, "Animals and Colors");
-            values.put(COLUMN_NAME_ACTIVITY, "Geometric Figures and Sports");
-            values.put(COLUMN_NAME_ACTIVITY, "Objects");
-            idActivity = (int) db.insert(ACTIVITY_TABLE, null, values);
+        if (getActivities()==null) {
+           db.execSQL("INSERT INTO activities (name_activity) " +
+                    "VALUES ('Alphabet and Numbers'), " +
+                    " ('Animals and Colors')," +
+                    " ('Family and Clothes')," +
+                    " ('Geometric Figures and Sports')," +
+                    " ('Objects')," +
+                    " ('Days of the Week')," +
+                    " ('Mounths and Seasons of Year')," +
+                    " ('Final Test');");
+            Log.d(TAG, "activity table: "+idActivity);
         }
         db.close();
-        Log.d(TAG, "activity tabla: "+idActivity);
-        return idActivity;
+        //return idActivity;
     }
-
 
 }

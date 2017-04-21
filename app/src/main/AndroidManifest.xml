@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.edu.utng.primaria">
 
-    <uses-permissionn android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".login.LoginActivity">
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,21 +20,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.test.Test" />
-
-        <activity android:name=".activities.test.TestAlphabet"
+        <activity
+            android:name=".activities.AdditionalMaterial"
             android:parentActivityName=".activities.AlphabetNumbers">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.AlphabetNumbers" />
         </activity>
-
-        <activity android:name=".activities.AdditionalMaterial"
-            android:parentActivityName=".activities.AlphabetNumbers">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AlphabetNumbers" />
-        </activity>
-        <activity android:name=".activities.Videos"
+        <activity
+            android:name=".activities.Videos"
             android:parentActivityName=".activities.AdditionalMaterial">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -41,7 +37,9 @@
         <activity
             android:name=".menu.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".menu.WelcomeActivity" />
+        <activity
+            android:name=".menu.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.AlphabetNumbers"
             android:parentActivityName=".menu.MainActivity">
@@ -49,6 +47,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".activities.write.AlphabetWrite2"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+
         <activity
             android:name=".activities.AnimalsColors"
             android:parentActivityName=".menu.MainActivity">
@@ -174,53 +181,236 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.FamilyClothes" />
         </activity>
-        <activity android:name=".activities.write.FamilyWriteActivity"
+        <activity
+            android:name=".activities.write.FamilyWriteActivity"
             android:parentActivityName=".activities.FamilyClothes">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.FamilyClothes" />
         </activity>
+        <activity
+            android:name=".activities.write.NumbersWrite"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity
+            android:name=".activities.listener.Alphabet"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity
+            android:name=".activities.test.TestAlphabet"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity
+            android:name=".activities.test.TestSportFigure"
+            android:parentActivityName=".activities.GeoFigSports">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.GeoFigSports" />
+        </activity>
+        <activity
+            android:name=".activities.write.AlphabetWrite"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AlphabetNumbers" />
+        </activity>
+        <activity
+            android:name=".activities.AboutActivity"
+            android:parentActivityName=".menu.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.listener.NumbersListening"
+            android:parentActivityName=".activities.AlphabetNumbers">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.TableroLogros"
+            android:parentActivityName=".menu.MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DragDrop"
+            android:parentActivityName=".activities.Objects">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Objects" />
+        </activity>
+        <activity
+            android:name=".activities.listener.Sport"
+            android:parentActivityName=".activities.GeoFigSports">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.GeoFigSports" />
+        </activity>
 
-        <activity android:name=".activities.write.NumbersWrite"
-            android:parentActivityName=".activities.AlphabetNumbers">
+        <activity
+            android:name=".activities.write.SportWrite"
+            android:parentActivityName=".activities.GeoFigSports">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AlphabetNumbers" />
+                android:value=".activities.GeoFigSports" />
         </activity>
-        <activity android:name=".activities.listener.Alphabet"
-            android:parentActivityName=".activities.AlphabetNumbers">
+        <activity
+            android:name=".activities.listener.AnimalsListenerActivity"
+            android:parentActivityName=".activities.AnimalsColors">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AlphabetNumbers" />
+                android:value=".activities.AnimalsColors" />
         </activity>
-        <activity android:name=".activities.test.TestAlphabet"
-            android:parentActivityName=".activities.AlphabetNumbers">
+        <activity
+            android:name=".activities.write.AnimalsWriteActivity"
+            android:parentActivityName=".activities.AnimalsColors">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AlphabetNumbers" />
+                android:value=".activities.AnimalsColors" />
         </activity>
-        <activity android:name=".activities.write.AlphabetWrite"
-            android:parentActivityName=".activities.AlphabetNumbers">
+
+        <service
+            android:name=".activities.AudioService"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".activities.listener.ClothesListenerActivity"
+            android:parentActivityName=".activities.FamilyClothes">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.AlphabetNumbers" />
+                android:value=".activities.FamilyClothes" />
         </activity>
-        <activity android:name=".activities.AboutActivity"
+        <activity
+            android:name=".activities.test.TestFamilyClothes"
+            android:parentActivityName=".activities.FamilyClothes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.FamilyClothes" />
+        </activity>
+        <activity
+            android:name=".activities.listener.SeasonsListenerActivity"
+            android:parentActivityName=".activities.MonthsSeasons">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MonthsSeasons" />
+        </activity>
+        <activity
+            android:name=".activities.listener.January"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.February"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.March"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.April"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.May"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.June"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.Julie"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+
+        <activity
+            android:name=".activities.listener.Augost"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+
+        <activity
+            android:name=".activities.listener.September"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.October"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.November"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+        <activity
+            android:name=".activities.listener.Dicember"
+            android:parentActivityName=".activities.listener.Months">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.listener.Months" />
+        </activity>
+
+        <activity
+            android:name=".activities.listener.Months"
             android:parentActivityName=".menu.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".menu.MainActivity" />
         </activity>
 
-        <activity android:name=".activities.listener.NumbersListening"
-            android:parentActivityName=".activities.AlphabetNumbers">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".menu.MainActivity" />
-    </activity>
-
-        <activity android:name=".activities.TableroLogros"/>
-
+        <activity
+            android:name=".activities.MonthsSeasons"
+            android:parentActivityName=".menu.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".menu.MainActivity" />
+        </activity>
+        <activity android:name=".activities.write.ClothesWriteActivity"></activity>
     </application>
 
 </manifest>

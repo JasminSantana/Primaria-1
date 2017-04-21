@@ -3,6 +3,7 @@ package mx.edu.utng.primaria.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,7 +44,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         switch(v.getId()){
             case R.id.bt_register:
                 register();
-
                 break;
             case R.id.tv_login:
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
@@ -55,24 +55,60 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void register(){
-        String email = etEmail.getText().toString();
+        final String email = etEmail.getText().toString().trim();
         String password = etPassword.getText().toString();
         String nombreUsuario=etUserName.getText().toString();
         String apellidosUsuario=etUserApellidos.getText().toString();
 
-        if(nombreUsuario.isEmpty()&&apellidosUsuario.isEmpty()&&email.isEmpty() && password.isEmpty()){
-            displayToast("Username/password/apellidos field empty");
-        }else{
-            dbLearningEnglish.addUser(nombreUsuario,apellidosUsuario,email,password);
-            displayToast("User registered ");
-            finish();
+        if(email.isEmpty()||password.isEmpty()||nombreUsuario.isEmpty()||apellidosUsuario.isEmpty()) {
+            etUserName.setError("You should write in the box");
+            etEmail.setError("You should write in the box");
+            etPassword.setError("You should write in the box");
+            etUserApellidos.setError("You should write in the box");
+
+
+        }else if (nombreUsuario.isEmpty()) {
+            etUserName.setError("You should write in the box");
+        } else {
+            if (etUserName.getText().length() < 3) {
+                etUserName.setError("The name have to be of the more letter");
+            }
 
         }
-    }
+        if (apellidosUsuario.isEmpty()) {
+            etUserApellidos.setError("You should write in the box");
+        } else {
 
-    public void registerActivities(){
-        dbLearningEnglish.addActivities();
-        finish();
+            if (etUserApellidos.getText().length() < 3) {
+                etUserApellidos.setError("The lastname have to be of the more letter");
+
+            }
+            if (email.isEmpty()) {
+                etEmail.setError("You should write in the box");
+            } else
+
+            if (etEmail.getText().length() < 3 || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.setError("The email is not write correct ");
+
+            }else
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.setError("The email is not write correct");
+
+            }else
+            if (password.isEmpty()) {
+                etPassword.setError("You should write in the box");
+            } else if (etPassword.getText().length() < 3 ) {
+                etPassword.setError("The password have to be of the more letter");
+
+            }else if(dbLearningEnglish.getEmails(email)){
+                etEmail.setError("This email is used, please insert a new email");
+            }
+            else{
+                dbLearningEnglish.addUser(nombreUsuario, apellidosUsuario, email, password);
+                displayToast("User registered ");
+                finish();
+            }
+        }
     }
 
     private void displayToast(String message){

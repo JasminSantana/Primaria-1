@@ -34,6 +34,7 @@
                 android:layout_below="@+id/iv_b"
                 android:inputType="text"
                 android:hint="BI"
+                android:maxLength="2"
                 android:textAlignment="center"/>
             <ImageView
                 android:layout_width="90dp"
@@ -50,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_di"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_d"
                 android:inputType="text"
                 android:hint="letter"/>
@@ -68,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_ef"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_f"
                 android:inputType="text"
                 android:hint="letter"/>
@@ -84,8 +87,10 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/et_el"
+                android:id="@+id/et_ele"
                 android:layout_below="@+id/iv_el"
+                android:hint="letter"
+                android:textAlignment="center"
                 android:inputType="text"/>
             <ImageView
                 android:layout_width="90dp"
@@ -93,7 +98,8 @@
                 android:src="@drawable/n"
                 android:layout_margin="4dp"
                 android:id="@+id/iv_n"
-                android:layout_below="@+id/et_el"
+                android:textAlignment="center"
+                android:layout_below="@+id/et_ele"
                 android:layout_centerHorizontal="true"
                 />
             <EditText
@@ -101,8 +107,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_en"
-                android:layout_below="@+id/iv_el"
+                android:layout_below="@+id/iv_n"
                 android:inputType="text"
+                android:textAlignment="center"
                 android:hint="letter"/>
             <ImageView
                 android:layout_width="90dp"
@@ -112,14 +119,16 @@
                 android:id="@+id/iv_o"
                 android:layout_below="@+id/et_en"
                 android:layout_centerHorizontal="true" />
+
             <EditText
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:id="@+id/et_ou"
-                android:layout_below="@+id/iv_n"
                 android:inputType="text"
-                android:hint="letter" />
+                android:hint="letter"
+                android:layout_below="@+id/iv_o"
+                android:layout_centerHorizontal="true"/>
+
             <ImageView
                 android:layout_width="90dp"
                 android:layout_height="100dp"
@@ -133,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_llei"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_j"
                 android:inputType="text"
                 android:hint="letter" />
@@ -149,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_kiu"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_q"
                 android:inputType="text"
                 android:hint="letter" />
@@ -165,6 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/et_es"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_s"
                 android:inputType="text"
                 android:hint="letter" />
@@ -180,8 +192,44 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/et_ui"
+                android:id="@+id/et_ui_write"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_u"
+                android:inputType="text"
+                android:hint="letter" />
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:src="@drawable/p"
+                android:layout_margin="4dp"
+                android:id="@+id/iv_p"
+                android:layout_below="@+id/et_ui_write"
+                android:layout_centerHorizontal="true" />
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/et_p_write"
+                android:textAlignment="center"
+                android:layout_below="@+id/iv_p"
+                android:inputType="text"
+                android:hint="letter" />
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:src="@drawable/m"
+                android:layout_margin="4dp"
+                android:id="@+id/iv_m"
+                android:layout_below="@+id/et_p_write"
+                android:layout_centerHorizontal="true" />
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/et_m_write"
+                android:textAlignment="center"
+                android:layout_below="@+id/iv_m"
                 android:inputType="text"
                 android:hint="letter" />
             <ImageView
@@ -190,13 +238,14 @@
                 android:src="@drawable/x"
                 android:layout_margin="4dp"
                 android:id="@+id/iv_x"
-                android:layout_below="@+id/et_ui"
+                android:layout_below="@+id/et_m_write"
                 android:layout_centerHorizontal="true" />
             <EditText
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/et_ex"
+                android:id="@+id/et_ex_write"
+                android:textAlignment="center"
                 android:layout_below="@+id/iv_x"
                 android:inputType="text"
                 android:hint="letter" />
@@ -205,7 +254,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Review"
-                android:layout_below="@+id/et_ex"
+                android:layout_below="@+id/et_ex_write"
                 android:id="@+id/bt_review"
                 android:textColor="@color/red"
                 android:background="@android:color/transparent"/>
@@ -217,11 +266,12 @@
                 android:id="@+id/bt_next_letter"
                 android:textColor="@color/red"
                 android:background="@android:color/transparent"
-                android:layout_below="@+id/et_ex"
+                android:layout_below="@+id/et_ex_write"
                 android:layout_toRightOf="@+id/iv_f"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="11dp" />
+
         </RelativeLayout>
     </ScrollView>
 

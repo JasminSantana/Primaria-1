@@ -13,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mx.edu.utng.primaria.R;
+import mx.edu.utng.primaria.activities.listener.ClothesListenerActivity;
 import mx.edu.utng.primaria.activities.listener.FamilyListenerActivity;
 import mx.edu.utng.primaria.activities.listener.NumbersListening;
+import mx.edu.utng.primaria.activities.test.TestFamilyClothes;
 import mx.edu.utng.primaria.activities.write.FamilyWriteActivity;
 import mx.edu.utng.primaria.adapters.ActivitiesAdapter;
 import mx.edu.utng.primaria.model.Activities;
@@ -55,7 +57,7 @@ public class FamilyClothes extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),FamilyListenerActivity.class));
                         break;
                     case 1:
-                        //startActivity(new Intent(getApplicationContext(),AlphabetWrititng.class));
+                        startActivity(new Intent(getApplicationContext(),ClothesListenerActivity.class));
                         break;
                     case 2:
                         startActivity(new Intent(getApplicationContext(),FamilyWriteActivity.class));
@@ -64,7 +66,10 @@ public class FamilyClothes extends AppCompatActivity {
                         //startActivity(new Intent(getApplicationContext(),NumbersWriting.class));
                         break;
                     case 4:
-                        //startActivity(new Intent(getApplicationContext(),TestActivity1.class));
+                        //startActivity(new Intent(getApplicationContext(),TestFamilyClothes.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(getApplicationContext(),TestFamilyClothes.class));
                         break;
                 }
             }

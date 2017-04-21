@@ -16,8 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mx.edu.utng.primaria.R;
+import mx.edu.utng.primaria.activities.listener.AnimalsListenerActivity;
 import mx.edu.utng.primaria.activities.listener.ColorListeningActivity;
 import mx.edu.utng.primaria.activities.test.TestAnimalsColorsActivity;
+import mx.edu.utng.primaria.activities.write.AnimalsWriteActivity;
 import mx.edu.utng.primaria.activities.write.ColorOrangeActivity;
 import mx.edu.utng.primaria.adapters.ActivitiesAdapter;
 import mx.edu.utng.primaria.model.Activities;
@@ -26,7 +28,7 @@ import mx.edu.utng.primaria.model.Activities;
  * Created by Husky Siberiano on 04/02/2017.
  */
 public class AnimalsColors extends ActionBarActivity {
-    final String[] items = {"ORANGE", "RED", "BLUE", "BLACK", "WHITE", "YELLOW", "PINK", "GREEN"};
+    //final String[] items = {"ORANGE", "RED", "BLUE", "BLACK", "WHITE", "YELLOW", "PINK", "GREEN"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,13 +57,13 @@ public class AnimalsColors extends ActionBarActivity {
             public void onClick(View v) {
                 switch(rvList.getChildPosition(v)){
                     case 0:
-                        //startActivity(new Intent(getApplicationContext(),AnimalsListener.class));
+                        startActivity(new Intent(getApplicationContext(),AnimalsListenerActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(getApplicationContext(),ColorListeningActivity.class));
                         break;
                     case 2:
-                        //startActivity(new Intent(getApplicationContext(),AnimalsWriting.class));
+                        startActivity(new Intent(getApplicationContext(),AnimalsWriteActivity.class));
                         break;
                     case 3:
                         AlertDialog.Builder builder = new AlertDialog.Builder(AnimalsColors.this);
@@ -71,6 +73,7 @@ public class AnimalsColors extends ActionBarActivity {
                                 .setPositiveButton("ACEPTAR", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         startActivity(new Intent(getApplicationContext(),ColorOrangeActivity.class));
+
                                     }
                                 });
                         builder.show();
