@@ -24,6 +24,17 @@ public class NumbersListening extends AppCompatActivity implements View.OnClickL
     private ImageView ivNine;
     private ImageView ivTen;
     private SoundPool soundPool;
+    
+    private int n1;
+    private int n2;
+    private int n3;
+    private int n4;
+    private int n5;
+    private int n6;
+    private int n7;
+    private int n8;
+    private int n9;
+    private int n10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +69,7 @@ public class NumbersListening extends AppCompatActivity implements View.OnClickL
 
         soundPool = new SoundPool(8, AudioManager.STREAM_MUSIC,0);
         this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        n1=soundPool.load(this,R.raw.one,1);
 
     }
 
@@ -65,7 +77,7 @@ public class NumbersListening extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.iv_one:
-                soundPool.play(soundPool.load(this,R.raw.one,1), 1,1,0,0,1);
+                soundPool.play(n1, 1,1,0,0,1);
                 break;
             case R.id.iv_two:
                 soundPool.play(soundPool.load(this,R.raw.two,1), 1,1,0,0,1);
