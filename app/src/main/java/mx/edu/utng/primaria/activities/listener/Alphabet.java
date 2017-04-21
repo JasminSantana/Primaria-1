@@ -44,6 +44,8 @@ public class Alphabet extends AppCompatActivity implements View.OnClickListener{
     private ImageButton ibZ;
     private SoundPool soundPool;
     private int loader;
+    private int a;
+    private int b;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
